@@ -6,9 +6,9 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
 	return (
-		<div className="content">
+		<div className="layout">
 			<Navbar />
-			<main>{children}</main>
+			<div className="content">{children}</div>
 		</div>
 	);
 };
