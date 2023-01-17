@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-import styled from "styled-components";
 
 export default function Home() {
 	return (
@@ -34,18 +32,16 @@ export default function Home() {
 					</div>
 				</div>
 
+        {/* View my projects */}
+        {/* Learn More About Me */}
+
 				{/* <div className={styles.goal}>
 					My goal in life is to use computers to make <br /> this world a bit better than how I found it!
 				</div> */}
 
-				{/* <ImageWrapper>
-						<Image src={"/portrait_placeholder.jpg"} width={300} height={400} alt={"Tyler Chen Portrait"} />
-					</ImageWrapper> */}
 			</div>
 		</>
 	);
 }
 
-const ImageWrapper = styled.div`
-	place-self: center;
-`;
+

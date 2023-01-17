@@ -36,7 +36,7 @@ const About = () => {
 							<li>- React</li>
 							<li>- GitLab CI/CD</li>
 							<li>- Apache 2</li>
-							<li>- PFSense Firewall</li>
+							<li>- pfSense Firewall</li>
 						</ul>
 					</StyledText>
 					<StyledImage>
