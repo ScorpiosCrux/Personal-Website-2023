@@ -6,15 +6,16 @@ const Project = () => {
 	return (
 		<StyledProjectGrid>
 			<StyledProject>
-				<div className={styles.projectImage}>
-					<img className={styles.image} src="/placeholder.png" alt="" />
-				</div>
-				<div className={styles.projectContent}>
+				<ProjectImageWrapper>
+					{/* <img src="/placeholder.png" alt="" /> */}
+					<ProjectImage />
+				</ProjectImageWrapper>
+				<ProjectContent>
 					<h3>Home Servers Setup</h3>
 					<p>
 						My servers are where I get to experiment and apply the knowledge that I learn. These machines allow
 						me to run a variety of applications such as websites, game servers, APIs, on high performance
-						hardware. 
+						hardware.
 					</p>
 
 					<ul>
@@ -24,8 +25,7 @@ const Project = () => {
 						<li>CI/CD</li>
 						<li>Terminals</li>
 					</ul>
-
-				</div>
+				</ProjectContent>
 			</StyledProject>
 		</StyledProjectGrid>
 	);
@@ -42,5 +42,20 @@ const StyledProject = styled.li`
 	grid-template-columns: repeat(12, 1fr);
 `;
 
+const ProjectContent = styled.div`
+	grid-column: 3 / 11;
+`;
+
+const ProjectImageWrapper = styled.div`
+	position: relative;
+	grid-column: 3 / 11;
+`;
+
+const ProjectImage = styled.img`
+	content: url(${"/placeholder.png"});
+	position: relative;
+	max-width: 100%;
+	object-fit: cover;
+`;
 
 export default Project;
