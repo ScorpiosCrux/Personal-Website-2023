@@ -1,8 +1,15 @@
 import styled from "styled-components";
 import styles from "@/components/Project.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
-const Project = () => {
+type Props = {
+	title: string;
+	description: string;
+	techList: string[];
+};
+
+const Project = (props: Props) => {
 	return (
 		<StyledProjectGrid>
 			<StyledProject>
@@ -10,20 +17,21 @@ const Project = () => {
 					<ProjectImage />
 				</ProjectImageWrapper>
 				<ProjectContent>
-					<h3>Home Servers Setup</h3>
-					<p>
-						My servers are where I get to experiment and apply the knowledge that I learn. These machines allow
-						me to run a variety of applications such as websites, game servers, APIs, on high performance
-						hardware.
-					</p>
+					<h3>{props.title}</h3>
+					<p>{props.description}</p>
 
 					<TechList>
-						<TechItem>Networking, Security</TechItem>
-						<TechItem>Docker</TechItem>
-						<TechItem>Operating Systems</TechItem>
-						<TechItem>CI/CD</TechItem>
-						<TechItem>Terminals</TechItem>
+						{props.techList.map((tech: string) => (
+							<TechItem>{tech}</TechItem>
+						))}
 					</TechList>
+
+					<LearnMoreBtn>
+						<NavLink href={"/"}>
+							LEARN MORE
+							<RightArrow />
+						</NavLink>
+					</LearnMoreBtn>
 				</ProjectContent>
 			</StyledProject>
 		</StyledProjectGrid>
@@ -34,7 +42,10 @@ const StyledProjectGrid = styled.ul`
 	position: relative;
 	list-style: none;
 	margin-bottom: 100px;
-	/* background-color: #1d1d1d; */
+
+	background-color: #1d1d1d;
+	padding: 30px;
+	border-radius: 5px;
 `;
 
 const StyledProject = styled.li`
@@ -44,12 +55,12 @@ const StyledProject = styled.li`
 `;
 
 const ProjectContent = styled.div`
-	grid-column: 3 / 11;
+	grid-column: 1 / 13;
 `;
 
 const ProjectImageWrapper = styled.div`
 	position: relative;
-	grid-column: 3 / 11;
+	grid-column: 1 / 13;
 `;
 
 const ProjectImage = styled.img`
@@ -66,13 +77,54 @@ const TechList = styled.ul`
 	flex-wrap: wrap;
 	gap: 5px;
 	margin-top: 10px;
-`
+`;
 
 const TechItem = styled.li`
 	border: 1px white solid;
 	border-radius: 20px;
 	padding: 0px 10px;
 	font-size: 0.8rem;
-`
+`;
+
+const RightArrow = styled.img`
+	content: url(${"/arrow-white.svg"});
+	aspect-ratio: 1;
+	height: 20px;
+`;
+
+const LearnMoreBtn = styled.div`
+	
+`;
+
+const NavLink = styled(Link)`
+	position: relative;
+	margin: 10px 0px;
+	border: 2px white solid;
+	border-radius: 5px;
+	width: fit-content;
+	padding: 2px 0 2px 10px;
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+
+	:hover {
+		transition: all 0.5s;
+		cursor: pointer;
+		background-color: white;
+		color: black;
+		${RightArrow} {
+			transition: all 0.5s;
+			content: url(${"/arrow-black.svg"});
+		}
+	}
+`;
 
 export default Project;
