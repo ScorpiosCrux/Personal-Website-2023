@@ -1,0 +1,15 @@
+.projectContent {
+	grid-column: 3 / 11;
+}
+
+.projectImage {
+	grid-column: 3 / 11;
+
+	position: relative;
+}
+
+.image {
+	position: relative;
+	max-width: 100%;
+	object-fit: cover;
+}
