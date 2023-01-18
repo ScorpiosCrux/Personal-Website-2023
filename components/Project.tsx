@@ -7,7 +7,6 @@ const Project = () => {
 		<StyledProjectGrid>
 			<StyledProject>
 				<ProjectImageWrapper>
-					{/* <img src="/placeholder.png" alt="" /> */}
 					<ProjectImage />
 				</ProjectImageWrapper>
 				<ProjectContent>
@@ -18,13 +17,13 @@ const Project = () => {
 						hardware.
 					</p>
 
-					<ul>
-						<li>Networking, Security</li>
-						<li>Docker</li>
-						<li>Operating Systems</li>
-						<li>CI/CD</li>
-						<li>Terminals</li>
-					</ul>
+					<TechList>
+						<TechItem>Networking, Security</TechItem>
+						<TechItem>Docker</TechItem>
+						<TechItem>Operating Systems</TechItem>
+						<TechItem>CI/CD</TechItem>
+						<TechItem>Terminals</TechItem>
+					</TechList>
 				</ProjectContent>
 			</StyledProject>
 		</StyledProjectGrid>
@@ -34,6 +33,8 @@ const Project = () => {
 const StyledProjectGrid = styled.ul`
 	position: relative;
 	list-style: none;
+	margin-bottom: 100px;
+	/* background-color: #1d1d1d; */
 `;
 
 const StyledProject = styled.li`
@@ -56,6 +57,22 @@ const ProjectImage = styled.img`
 	position: relative;
 	max-width: 100%;
 	object-fit: cover;
+	border-radius: 5px;
 `;
+
+const TechList = styled.ul`
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin-top: 10px;
+`
+
+const TechItem = styled.li`
+	border: 1px white solid;
+	border-radius: 20px;
+	padding: 0px 10px;
+	font-size: 0.8rem;
+`
 
 export default Project;
