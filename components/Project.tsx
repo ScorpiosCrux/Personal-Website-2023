@@ -7,6 +7,7 @@ type Props = {
 	title: string;
 	description: string;
 	techList: string[];
+	url: string;
 };
 
 const Project = (props: Props) => {
@@ -27,7 +28,7 @@ const Project = (props: Props) => {
 					</TechList>
 
 					<LearnMoreBtn>
-						<NavLink href={"/"}>
+						<NavLink href={props.url}>
 							LEARN MORE
 							<RightArrow />
 						</NavLink>
