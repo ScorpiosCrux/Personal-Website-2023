@@ -1,4 +1,4 @@
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import styles from "@/styles/About.module.css";
 import styled from "styled-components";
@@ -6,7 +6,6 @@ import styled from "styled-components";
 const About = () => {
 	return (
 		<main className={styles.main}>
-
 			<section className={styles.section}>
 				<h2>About Me</h2>
 				<div className={styles.inner}>

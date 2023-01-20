@@ -22,7 +22,7 @@ const Projects = () => {
 
 			<StyledSection>
 				<StyledSectionTitle>
-					<h2>Noteworthy Projects</h2> {/* Make this bigger! And the other texts */}
+					<h2>Other Noteworthy Projects</h2> {/* Make this bigger! And the other texts */}
 				</StyledSectionTitle>
 
 				<Project
