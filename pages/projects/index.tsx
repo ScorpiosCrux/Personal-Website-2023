@@ -15,7 +15,7 @@ const Projects = () => {
 						me to run a variety of applications such as websites, game servers, APIs, on high performance
 						hardware."
 					techList={["Networking", "Security", "Docker", "Operating Systems", "CI/CD", "Terminals"]}
-					url={"/projects/homeserver"}
+					url={"/projects/home-server"}
 				/>
 				<Project title="Smart Budget Application" description="" techList={[]} url={"/"} />
 			</StyledSection>
