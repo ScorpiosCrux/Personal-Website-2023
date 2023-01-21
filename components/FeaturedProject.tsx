@@ -10,34 +10,66 @@ type Props = {
 	url: string;
 };
 
-const Project = (props: Props) => {
+const FeaturedProject = (props: Props) => {
 	return (
-		<ProjectContent>
-			<h3>{props.title}</h3>
-			<p>{props.description}</p>
+		<StyledProjectGrid>
+			<StyledProject>
+				<ProjectImageWrapper>
+					<ProjectImage />
+				</ProjectImageWrapper>
+				<ProjectContent>
+					<h3>{props.title}</h3>
+					<p>{props.description}</p>
 
-			<TechList>
-				{props.techList.map((tech: string) => (
-					<TechItem>{tech}</TechItem>
-				))}
-			</TechList>
+					<TechList>
+						{props.techList.map((tech: string) => (
+							<TechItem>{tech}</TechItem>
+						))}
+					</TechList>
 
-			<LearnMoreBtn>
-				<NavLink href={props.url}>
-					LEARN MORE
-					<RightArrow />
-				</NavLink>
-			</LearnMoreBtn>
-		</ProjectContent>
+					<LearnMoreBtn>
+						<NavLink href={props.url}>
+							LEARN MORE
+							<RightArrow />
+						</NavLink>
+					</LearnMoreBtn>
+				</ProjectContent>
+			</StyledProject>
+		</StyledProjectGrid>
 	);
 };
 
-const ProjectContent = styled.div`
-	grid-column: 1 / 13;
+const StyledProjectGrid = styled.ul`
+	position: relative;
+	list-style: none;
+	margin-bottom: 100px;
+
 	background-color: #1d1d1d;
 	padding: 30px;
 	border-radius: 5px;
-	margin-bottom: 20px;
+`;
+
+const StyledProject = styled.li`
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+`;
+
+const ProjectContent = styled.div`
+	grid-column: 1 / 13;
+`;
+
+const ProjectImageWrapper = styled.div`
+	position: relative;
+	grid-column: 1 / 13;
+`;
+
+const ProjectImage = styled.img`
+	content: url(${"/placeholder.png"});
+	position: relative;
+	max-width: 100%;
+	object-fit: cover;
+	border-radius: 5px;
 `;
 
 const TechList = styled.ul`
@@ -61,7 +93,9 @@ const RightArrow = styled.img`
 	height: 20px;
 `;
 
-const LearnMoreBtn = styled.div``;
+const LearnMoreBtn = styled.div`
+	
+`;
 
 const NavLink = styled(Link)`
 	position: relative;
@@ -94,4 +128,4 @@ const NavLink = styled(Link)`
 	}
 `;
 
-export default Project;
+export default FeaturedProject;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import FeaturedProject from "@/components/FeaturedProject";
 import Project from "@/components/Project";
 
 const Projects = () => {
@@ -9,7 +10,7 @@ const Projects = () => {
 					<h2>Passion Projects</h2>
 				</StyledSectionTitle>
 
-				<Project
+				<FeaturedProject
 					title="Home Servers Setup"
 					description="My servers are where I get to experiment and apply the knowledge that I learn. These machines allow
 						me to run a variety of applications such as websites, game servers, APIs, on high performance
@@ -17,7 +18,7 @@ const Projects = () => {
 					techList={["Networking", "Security", "Docker", "Operating Systems", "CI/CD", "Terminals"]}
 					url={"/projects/home-server"}
 				/>
-				<Project title="Smart Budget Application" description="" techList={[]} url={"/"} />
+				<FeaturedProject title="Smart Budget Application" description="" techList={[]} url={"/"} />
 			</StyledSection>
 
 			<StyledSection>
