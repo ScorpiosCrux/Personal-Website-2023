@@ -38,6 +38,7 @@ const ProjectContent = styled.div`
 	padding: 30px;
 	border-radius: 5px;
 	margin-bottom: 20px;
+	
 `;
 
 const TechList = styled.ul`
