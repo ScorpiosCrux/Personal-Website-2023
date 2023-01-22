@@ -10,7 +10,6 @@ type Props = {
 	url: string;
 };
 
-
 const FeaturedProject = (props: Props) => {
 	return (
 		<StyledProjectGrid>
@@ -94,9 +93,7 @@ const RightArrow = styled.img`
 	height: 20px;
 `;
 
-const LearnMoreBtn = styled.div`
-	
-`;
+const LearnMoreBtn = styled.div``;
 
 const NavLink = styled(Link)`
 	position: relative;
