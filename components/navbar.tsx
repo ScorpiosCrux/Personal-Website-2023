@@ -14,7 +14,7 @@ const Navbar = () => {
 				<NavLink href={"/contact"}>CONTACT</NavLink>
 			</Links>
 			<ExternalLinks>
-				<Link href={"https://gitlab.tylerchen.ca"} target={"_blank"}>
+				<Link href={"https://gitlab.tylerchen.ca/tylerchen"} target={"_blank"}>
 					<Icon url="/gitlab.svg"/>
 				</Link>
 				<Link href={"https://github.com/ScorpiosCrux"} target={"_blank"}>
