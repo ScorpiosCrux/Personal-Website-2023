@@ -10,6 +10,7 @@ type Props = {
 	url: string;
 };
 
+
 const FeaturedProject = (props: Props) => {
 	return (
 		<StyledProjectGrid>
