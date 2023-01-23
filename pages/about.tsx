@@ -12,18 +12,18 @@ const About = () => {
 					<StyledText>
 						<p>
 							Hello, my name is Tyler Chen, and I enjoy learning about technologies and using them to solve
-							issues in the world. I started coding in 2015 building simple Python functions. Years later, I'm
+							issues in the world. I started coding in 2015 building simple Python functions. Years later, I&apos;m
 							more passionate than ever!
 						</p>
 
 						<p>
-							Having recently graduated from the University of Calgary with a degree in Computer Science! I'm
-							taking a break before I apply for jobs to learn about the technologies that I've discovered
+							Having recently graduated from the University of Calgary with a degree in Computer Science! I&apos;m
+							taking a break before I apply for jobs to learn about the technologies that I&apos;ve discovered
 							during my internship and courses!
 						</p>
 
 						<p>
-							Recently, I've been working on my home lab and here are a few interesting technologies I've been
+							Recently, I&apos;ve been working on my home lab and here are a few interesting technologies I&apos;ve been
 							working with:
 						</p>
 						<ul className={styles.techList}>

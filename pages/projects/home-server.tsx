@@ -48,7 +48,7 @@ const HomeServer = () => {
 
 					<p>
 						To start, I deployed NextCloud, a file sharing server. <b>Problem:</b> Could not create SSL certs for
-						a local IP as it wasn't reachable by local cert authorities.
+						a local IP as it wasn&apos;t reachable by local cert authorities.
 					</p>
 				</div>
 				<TechList>
@@ -111,7 +111,7 @@ const HomeServer = () => {
 
 				<div className="description">
 					<p>
-						Discovered a router called Ubiquiti ER-X. Though this router has a feature called "NAT reflection"
+						Discovered a router called Ubiquiti ER-X. Though this router has a feature called &quot;NAT reflection&quot;
 						which allows me to connect to my server using my public IP!
 					</p>
 				</div>

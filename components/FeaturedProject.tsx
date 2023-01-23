@@ -22,8 +22,8 @@ const FeaturedProject = (props: Props) => {
 					<p>{props.description}</p>
 
 					<TechList>
-						{props.techList.map((tech: string) => (
-							<TechItem>{tech}</TechItem>
+						{props.techList.map((tech: string, i:number) => (
+							<TechItem key={i}>{tech}</TechItem>
 						))}
 					</TechList>
 

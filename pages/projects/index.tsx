@@ -54,7 +54,7 @@ const Projects = () => {
 
 				<Project
 					title="Personal Website"
-					description="Currently, this website is the second version of my website that I've built."
+					description="Currently, this website is the second version of my website that I&apos;ve built."
 					techList={["NextJS", "ReactTS", "CSS", "HTML", "Apache2", "Search Engine Optimization"]}
 					url={"/"}
 				/>

@@ -16,14 +16,14 @@ export default function Home() {
 					<h1 className={styles.title}>
 						<span className={styles.regular}>My name is </span>
 						Tyler Chen <br />
-						<span className={styles.regular}>and I'm a </span>
+						<span className={styles.regular}>and I&apos;m a </span>
 						Full Stack Developer!
 					</h1>
 				</div>
 
 				<div className={styles.hobbyContainer}>
 					<p>
-						<i>&emsp; but I'm also a:</i>
+						<i>&emsp; but I&apos;m also a:</i>
 					</p>
 					<div className={styles.hobbies}>
 						<h3>Gamer</h3>
