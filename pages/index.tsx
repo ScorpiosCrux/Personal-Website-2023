@@ -5,7 +5,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Tyler Chen</title>
+				<title>Tyler Chen | Home</title>
 				<meta name="description" content="Learn about Tyler Chen and his projects! Located in Calgary, Alberta!" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
