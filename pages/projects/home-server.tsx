@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
+import Image from "next/image";
 
 const HomeServer = () => {
 	return (
@@ -132,7 +133,8 @@ const HomeServer = () => {
 						<h2>January 2023</h2>
 						<div className="line" />
 					</div>
-					<img src="/placeholder.png" alt="" />
+					<Image src={"/project-pictures/home-network.jpeg"} width={525} height={700} alt={"Home Network Setup"} />
+
 
 					<div className="description">
 						<p>My biggest update yet! Added a pfSense firewall, setup dynamic DNS with Cloudflare.</p>
@@ -191,6 +193,8 @@ const TimelineSection = styled.section`
 	padding-bottom: 40px;
 	display: flex;
 	flex-direction: column;
+	/* align-items: center; */
+	
 
 	p {
 		margin-bottom: 20px;
