@@ -8,23 +8,39 @@ const Navbar = () => {
 				<Link href={"/"}> TYLER </Link>
 			</LogoWrapper>
 			<Links>
-				<NavLink href={"/"}>HOME</NavLink>
-				<NavLink href={"/about"}>ABOUT</NavLink>
-				<NavLink href={"/projects"}>PROJECTS</NavLink>
-				<NavLink href={"/contact"}>CONTACT</NavLink>
+				<NavLink>
+					<Link className="inner-link" href={"/"}>
+						HOME
+					</Link>
+				</NavLink>
+				<NavLink>
+					<Link className="inner-link" href={"/about"}>
+						ABOUT
+					</Link>
+				</NavLink>
+				<NavLink>
+					<Link className="inner-link" href={"/projects"}>
+						PROJECTS
+					</Link>
+				</NavLink>
+				<NavLink>
+					<Link className="inner-link" href={"/contact"}>
+						CONTACT
+					</Link>
+				</NavLink>
 			</Links>
 			<ExternalLinks>
 				<Link href={"https://gitlab.tylerchen.ca/tylerchen"} target={"_blank"}>
-					<Icon url="/gitlab.svg"/>
+					<Icon url="/gitlab.svg" />
 				</Link>
 				<Link href={"https://github.com/ScorpiosCrux"} target={"_blank"}>
-					<Icon url="/github.svg"/>
+					<Icon url="/github.svg" />
 				</Link>
 				<Link href={"https://www.linkedin.com/in/tyler-chen1/"} target={"_blank"}>
-					<Icon url="/linkedin.svg"/>
+					<Icon url="/linkedin.svg" />
 				</Link>
 				<Link href={"https://cloud.tylerchen.ca/"} target={"_blank"}>
-					<Icon url="/nextcloud.svg"/>
+					<Icon url="/nextcloud.svg" />
 				</Link>
 			</ExternalLinks>
 		</Wrapper>
@@ -42,9 +58,18 @@ const Links = styled.div`
 	gap: 10px;
 `;
 
-const NavLink = styled(Link)`
-	font-weight: 200;
-	font-size: 20px;
+const NavLink = styled.div`
+	display: flex;
+	align-items: center;
+	height: 40px;
+	:hover .inner-link {
+		border-bottom: 2px solid white;
+	}
+
+	.inner-link {
+		font-weight: 200;
+		font-size: 20px;
+	}
 `;
 
 const Wrapper = styled.nav`
@@ -71,6 +96,5 @@ const Icon = styled.img<{ url: string }>`
 	display: flex;
 	align-items: center;
 `;
-
 
 export default Navbar;
