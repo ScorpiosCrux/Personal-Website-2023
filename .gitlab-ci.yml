@@ -1,22 +1,15 @@
 stages:
-  - build
-  - docker-build
+  - deploy
 
-build:
-  stage: build
-  image: node:18
-  script:
-    - npm install
-    - npm run build
-    - echo "Build Complete!"
+cache:
+  paths:
+    - node_modules/
 
-docker-build:
-  stage: docker-build
-  image: docker:latest
-  services:
-    - name: docker:19.03.8-dind
-  before_script:
-    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+deploy:
+  image: docker:dind
+  stage: deploy
   script:
-    - docker build --pull -t "$CI_REGISTRY_IMAGE" .
-    - docker push "$CI_REGISTRY_IMAGE"
+    - docker build . -t test
+    - docker run -d -p 3000:3000 --rm --name test
+
+
