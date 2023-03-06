@@ -1,9 +1,8 @@
 stages: 
   - build
-  - deploy
 
 build:
-  stage: buil
+  stage: build
   image: node:18
   script: 
     - npm install
