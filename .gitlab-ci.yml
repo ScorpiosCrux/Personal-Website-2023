@@ -1,15 +1,22 @@
 stages:
-  - deploy
+  - build
+  - docker-build
 
-cache:
-  paths:
-    - node_modules/
-
-deploy:
-  image: docker:dind
-  stage: deploy
+build:
+  stage: build
+  image: node:18
   script:
-    - docker build . -t test
-    - docker run -d -p 3000:3000 --rm --name test
+    - yarn install
+    - yarn run build
+    - echo "Build Complete!"
 
-
+docker-build:
+  stage: docker-build
+  image: docker:latest
+  services:
+    - name: docker:19.03.8-dind
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - docker build --pull -t "$CI_REGISTRY_IMAGE" .
+    - docker push "$CI_REGISTRY_IMAGE"
