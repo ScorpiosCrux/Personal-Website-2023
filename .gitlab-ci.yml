@@ -3,7 +3,7 @@ stages:
 
 
 deploy website:
-  stage: build
+  stage: deploy
   image: node:18
   script: 
     - npm install
