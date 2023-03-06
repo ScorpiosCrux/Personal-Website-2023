@@ -6,8 +6,8 @@ build:
   stage: build
   image: node:18
   script:
-    - yarn install
-    - yarn run build
+    - npm install
+    - npm run build
     - echo "Build Complete!"
 
 docker-build:
