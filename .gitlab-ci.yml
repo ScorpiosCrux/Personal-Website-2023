@@ -1,0 +1,18 @@
+stages: 
+  - build
+  - deploy
+
+
+build website:
+  stage: build
+  image: node:18
+  script: 
+    - npm install
+    - npm run build
+
+
+deploy website:
+  stage: deploy
+  image: node:18
+  script:
+    - npm run start
