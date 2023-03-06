@@ -15,4 +15,4 @@ deploy website:
   stage: deploy
   image: node:18
   script:
-    - npm run start
+    - npm start
