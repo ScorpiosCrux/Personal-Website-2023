@@ -10,13 +10,17 @@ build:
     - npm run build
     - echo "Build Complete!"
 
+# Docker in Docker needs to use the Docker executor
+# If you already have an executor running, you can check it in GitLab's admin panel
+# For the exact env variables, you can look at GitLab's documentation
 docker-build:
   stage: docker-build
   image: docker:latest
   services:
     - docker:dind
   before_script:
-    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" gitlab.tylerchen.ca
+    # We add double quotes in case the creds contain spaces
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
   script:
     - docker build --pull -t "$CI_REGISTRY_IMAGE" .
     - docker push "$CI_REGISTRY_IMAGE"
