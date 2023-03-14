@@ -15,7 +15,7 @@ export default function Home() {
 				<div className={styles.titleContainer}>
 					<h1 className={styles.title}>
 						<span className={styles.regular}>My name is </span>
-						Tyler Chen <br />
+						Tyler Chen GitLab Test <br />
 						<span className={styles.regular}>and I&apos;m a </span>
 						Full Stack Developer!
 					</h1>
