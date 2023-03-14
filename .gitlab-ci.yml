@@ -1,43 +1,25 @@
-# stages:
-#   - build
-#   - docker-build
-
-# build:
-#   stage: build
-#   image: node:18
-#   script:
-#     - npm install
-#     - npm run build
-#     - echo "Build Complete!"
-
-# # Docker in Docker needs to use the Docker executor
-# # If you already have an executor running, you can check it in GitLab's admin panel
-# # For the exact env variables, you can look at GitLab's documentation
-# docker-build:
-#   stage: docker-build
-#   image: docker:latest
-#   services:
-#     - docker:dind
-#   before_script:
-#     # We don't use gitlab.tylerchen.ca because the registry exists on gitlab.tylerchen.ca:5050
-#     docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-#   script:
-#     # --pull flag ensures to fetch changes before building.
-#     - docker build --pull -t $CI_REGISTRY_IMAGE .
-#     - docker push $CI_REGISTRY_IMAGE
-#     - echo "Registry image:" $CI_REGISTRY_IMAGE
-
-stages: 
+stages:
   - clean
   - deploy
 
+# Stops or removes previous containers that allows deploy to run.
+# Some commands can fail if the container does not exist
 clean:
   stage: clean
   image: docker:latest
   allow_failure: true
   script:
+    - docker images -qf "dangling=true" # Removes *dangling* images aka. the ones that are "none" with tag "none"
     - docker stop personal-website
 
+# Builds a docker image that is connected to the docker socket where the runner is located.
+# Runs the container with:
+#   --rm : cleans up after container stops
+#   -d : detached
+#   -p : ports
+#   --name : name of the container
+#   $CI_REGISTRY_IMAGE: environment variable set by GitLab Runner
+#   5000 on host, 3000 inside the container
 deploy:
   stage: deploy
   image: docker:latest
