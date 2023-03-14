@@ -28,12 +28,19 @@
 #     - echo "Registry image:" $CI_REGISTRY_IMAGE
 
 stages: 
+  - clean
   - deploy
+
+clean:
+  stage: clean
+  image: docker:latest
+  allow_failure: true
+  script:
+    - docker stop deploypersonal
 
 deploy:
   stage: deploy
   image: docker:latest
   script:
-    - docker stop deploypersonal
     - docker build --pull -t $CI_REGISTRY_IMAGE .
     - docker run -d -p 3000:3000 --rm --name deploypersonal $CI_REGISTRY_IMAGE:latest
