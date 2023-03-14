@@ -36,11 +36,11 @@ clean:
   image: docker:latest
   allow_failure: true
   script:
-    - docker stop deploypersonal
+    - docker stop personal-website
 
 deploy:
   stage: deploy
   image: docker:latest
   script:
     - docker build --pull -t $CI_REGISTRY_IMAGE .
-    - docker run -d -p 3000:3000 --rm --name deploypersonal $CI_REGISTRY_IMAGE:latest
+    - docker run -d -p 5000:3000 --rm --name personal-website $CI_REGISTRY_IMAGE:latest
