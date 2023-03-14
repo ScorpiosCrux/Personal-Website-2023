@@ -6,7 +6,10 @@ export default function Home() {
 		<>
 			<Head>
 				<title>Tyler Chen | Home</title>
-				<meta name="description" content="Learn about Tyler Chen and his projects! Located in Calgary, Alberta!" />
+				<meta
+					name="description"
+					content="Learn about Tyler Chen and his projects! Located in Calgary, Alberta!"
+				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
@@ -15,7 +18,8 @@ export default function Home() {
 				<div className={styles.titleContainer}>
 					<h1 className={styles.title}>
 						<span className={styles.regular}>My name is </span>
-						Tyler Chen GitLab Test <br />
+						Tyler Chen
+						<br />
 						<span className={styles.regular}>and I&apos;m a </span>
 						Full Stack Developer!
 					</h1>
@@ -32,16 +36,13 @@ export default function Home() {
 					</div>
 				</div>
 
-        {/* View my projects */}
-        {/* Learn More About Me */}
+				{/* View my projects */}
+				{/* Learn More About Me */}
 
 				{/* <div className={styles.goal}>
 					My goal in life is to use computers to make <br /> this world a bit better than how I found it!
 				</div> */}
-
 			</div>
 		</>
 	);
 }
-
-
