@@ -1,3 +1,5 @@
+https://stackoverflow.com/questions/17990647/npm-install-errors-with-error-enoent-chmod
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
