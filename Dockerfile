@@ -6,7 +6,7 @@ RUN mkdir -p /home/app/
 
 WORKDIR /home/app/
 
-# RUN npm i
+RUN npm i
 
 COPY ./ /home/app/
 
