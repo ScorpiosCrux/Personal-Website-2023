@@ -21,9 +21,10 @@ docker-build:
   before_script:
     # We add double quotes in case the creds contain spaces
     # We add gitlab.tylerchen.ca instead of $CI_REGISTRY because gitlab.tylerchen.ca uses a proxy
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD gitlab.tylerchen.ca
+    # - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD gitlab.tylerchen.ca
+    docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
   script:
     # --pull flag ensures to fetch changes before building.
     - docker build --pull -t "$CI_REGISTRY_IMAGE" .
-    - docker push "$CI_REGISTRY_IMAGE"
+    - docker push gitlab.tylerchen.ca:5050/tylerchen/personal-website-2023
     - echo "Registry image:" $CI_REGISTRY_IMAGE
