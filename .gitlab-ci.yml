@@ -35,4 +35,4 @@ deploy:
   image: docker:latest
   script:
     - docker build --pull -t $CI_REGISTRY_IMAGE .
-    - docker run -d -p 3000:3000 --rm --name deploypersonal $CI_REGISTRY_IMAGE
+    - docker run -d -p 3000:3000 --rm --name deploypersonal $CI_REGISTRY_IMAGE:latest
