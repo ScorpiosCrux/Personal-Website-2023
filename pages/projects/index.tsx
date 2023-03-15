@@ -24,10 +24,22 @@ const Projects = () => {
 						description="My servers are where I get to experiment and apply the knowledge that I learn. These machines allow
 					me to run a variety of applications such as websites, game servers, APIs, on high performance
 					hardware."
-						techList={["Networking", "Security", "Docker", "Operating Systems", "CI/CD", "Terminals"]}
+						techList={[
+							"Networking",
+							"Security",
+							"Docker",
+							"Operating Systems",
+							"CI/CD",
+							"Terminals",
+						]}
 						url={"/projects/home-server"}
 					/>
-					<FeaturedProject title="Smart Budget Application" description="" techList={[]} url={"/"} />
+					<FeaturedProject
+						title="Smart Budget Application"
+						description=""
+						techList={["MongoDB", "Express", "React", "TypeScript", "JWT"]}
+						url={"/projects/smart-budget"}
+					/>
 				</StyledSection>
 
 				<StyledSection>

@@ -3,14 +3,11 @@ import styled from "styled-components";
 import ImageDisplay from "@/components/ImageDisplay";
 
 // Image Imports
-import nextcloudPic from "public/project-pictures/nextcloud.png"
-import digitalOcean from "public/project-pictures/digital-ocean.png"
-import homeServerPic from "public/project-pictures/home-network.jpeg";
-import ubiquitiPic from "public/project-pictures/ubiquiti.jpg"
-import cheapPcPic from "public/project-pictures/cheap-pc.png"
-
-
-import placeHolderPic from "public/placeholder.png";
+import nextcloudPic from "public/project-pictures/home-server/nextcloud.png"
+import digitalOcean from "public/project-pictures/home-server/digital-ocean.png"
+import homeServerPic from "public/project-pictures/home-server/home-network.jpeg";
+import ubiquitiPic from "public/project-pictures/home-server/ubiquiti.jpg"
+import cheapPcPic from "public/project-pictures/home-server/cheap-pc.png"
 
 const HomeServer = () => {
 	return (
