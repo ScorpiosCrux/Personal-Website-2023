@@ -1,6 +1,10 @@
 import Head from "next/head";
 import styled from "styled-components";
-import Image from "next/image";
+import ImageDisplay from "@/components/ImageDisplay";
+
+// Image Imports
+import homeServerPic from "public/project-pictures/home-network.jpeg";
+import placeHolderPic from "public/placeholder.png";
 
 const HomeServer = () => {
 	return (
@@ -16,8 +20,9 @@ const HomeServer = () => {
 				<div className="projectHeader">
 					<h1>Home Server Setup</h1>
 					<p>
-						My server is an example of who I am. It is one of my most important ongoing projects. I constantly
-						try, learn and correct concepts and ideas with my server as you will see in the following:
+						My server is an example of who I am. It is one of my most important ongoing projects. I
+						constantly try, learn and correct concepts and ideas with my server as you will see in
+						the following:
 					</p>
 
 					<h4>Summary of Technologies Used: </h4>
@@ -48,17 +53,18 @@ const HomeServer = () => {
 						<h2>December 2019</h2>
 						<div className="line" />
 					</div>
-					<img src="/placeholder.png" alt="" />
+
+					<ImageDisplay image={placeHolderPic} altText="PlaceHolder" />
 
 					<div className="description">
 						<p>
-							When COVID-19 started, I decided to build a server to experiment with Linux and Deployment. I
-							wanted a place where I could show people my work! A dedicated server!
+							When COVID-19 started, I decided to build a server to experiment with Linux and
+							Deployment. I wanted a place where I could show people my work! A dedicated server!
 						</p>
 
 						<p>
-							To start, I deployed NextCloud, a file sharing server. <b>Problem:</b> Could not create SSL certs
-							for a local IP as it wasn&apos;t reachable by local cert authorities.
+							To start, I deployed NextCloud, a file sharing server. <b>Problem:</b> Could not
+							create SSL certs for a local IP as it wasn&apos;t reachable by local cert authorities.
 						</p>
 					</div>
 					<TechList>
@@ -76,13 +82,15 @@ const HomeServer = () => {
 						<h2>2021</h2>
 						<div className="line" />
 					</div>
-					<img src="/placeholder.png" alt="" />
+
+					<ImageDisplay image={placeHolderPic} altText="PlaceHolder" />
 
 					<div className="description">
 						<p>
-							About 1 year later, I thought hosting at home was a flop. I recently discovered Google Cloud
-							Platform and found Digital Ocean to be a cheaper alternative. Moved NextCloud to Digital Ocean
-							for $26, now I was able to access my files from inside and outside my network with encryption!
+							About 1 year later, I thought hosting at home was a flop. I recently discovered Google
+							Cloud Platform and found Digital Ocean to be a cheaper alternative. Moved NextCloud to
+							Digital Ocean for $26, now I was able to access my files from inside and outside my
+							network with encryption!
 						</p>
 					</div>
 					<TechList>
@@ -97,13 +105,16 @@ const HomeServer = () => {
 						<h2>June 2022</h2>
 						<div className="line" />
 					</div>
-					<img src="/placeholder.png" alt="" />
+
+					<ImageDisplay image={placeHolderPic} altText="PlaceHolder" />
 
 					<div className="description">
 						<p>
-							Bought a $300 computer to experiment with pfSense, but decided to try my previously flopped
-							deployment with new knowledge! Installed NextCloud and my new personal website! <b>Problem: </b>
-							Same issues, but I figured out that, using a VPN, I am technically always outside my network.
+							Bought a $300 computer to experiment with pfSense, but decided to try my previously
+							flopped deployment with new knowledge! Installed NextCloud and my new personal
+							website! <b>Problem: </b>
+							Same issues, but I figured out that, using a VPN, I am technically always outside my
+							network.
 						</p>
 					</div>
 					<TechList>
@@ -117,12 +128,12 @@ const HomeServer = () => {
 						<h2>November 2022</h2>
 						<div className="line" />
 					</div>
-					<img src="/placeholder.png" alt="" />
+					<ImageDisplay image={placeHolderPic} altText="PlaceHolder" />
 
 					<div className="description">
 						<p>
-							Discovered a router called Ubiquiti ER-X. Though this router has a feature called &quot;NAT
-							reflection&quot; which allows me to connect to my server using my public IP!
+							Discovered a router called Ubiquiti ER-X. Though this router has a feature called
+							&quot;NAT reflection&quot; which allows me to connect to my server using my public IP!
 						</p>
 					</div>
 					<TechList></TechList>
@@ -133,21 +144,24 @@ const HomeServer = () => {
 						<h2>January 2023</h2>
 						<div className="line" />
 					</div>
-					<Image src={"/project-pictures/home-network.jpeg"} width={525} height={700} alt={"Home Network Setup"} />
 
+					<ImageDisplay image={homeServerPic} altText="Picture of Home Server" />
 
 					<div className="description">
-						<p>My biggest update yet! Added a pfSense firewall, setup dynamic DNS with Cloudflare.</p>
-
 						<p>
-							Upgraded a few parts in the $300 PC and then created a secondary server for development and
-							experimentation. Used Docker Compose to deploy GitLab CE and Docker to deploy GitLab runners on
-							the main server.
+							My biggest update yet! Added a pfSense firewall, setup dynamic DNS with Cloudflare.
 						</p>
 
 						<p>
-							During the summer, I experienced some sudden shutdowns due to lighting, and thus to prevent
-							sudden dataloss from brownouts or blackouts, I added a 1500VA battery backup to both servers!
+							Upgraded a few parts in the $300 PC and then created a secondary server for
+							development and experimentation. Used Docker Compose to deploy GitLab CE and Docker to
+							deploy GitLab runners on the main server.
+						</p>
+
+						<p>
+							During the summer, I experienced some sudden shutdowns due to lighting, and thus to
+							prevent sudden dataloss from brownouts or blackouts, I added a 1500VA battery backup
+							to both servers!
 						</p>
 
 						<p>My server is now equiped with many features a typical cloud provider has!</p>
@@ -181,9 +195,6 @@ const ProjectTimeline = styled.div`
 		margin-top: 20px;
 	}
 
-	img {
-	}
-
 	.projectHeader {
 		margin-bottom: 50px;
 	}
@@ -193,8 +204,6 @@ const TimelineSection = styled.section`
 	padding-bottom: 40px;
 	display: flex;
 	flex-direction: column;
-	/* align-items: center; */
-	
 
 	p {
 		margin-bottom: 20px;
