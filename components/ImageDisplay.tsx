@@ -9,7 +9,7 @@ interface Props {
 
 const ImageDisplay = ({ image, altText }: Props) => {
 	return (
-		<ImageContainer>
+		<ImageContainer image={image}>
 			{image.width > image.height ? (
 				<Image src={image} className={"imgHorizontal"} alt={altText} />
 			) : (
@@ -19,13 +19,13 @@ const ImageDisplay = ({ image, altText }: Props) => {
 	);
 };
 
-const ImageContainer = styled.div`
+const ImageContainer = styled.div<{ image: StaticImageData }>`
 	display: flex;
 	justify-content: center;
 
 	width: 100%;
-	max-height: 1000px;
-	height: 600px;
+	max-height: 800px;
+	${(props) => props.image.width < props.image.height && `height: ${props.image.height}px;`}
 
 	.imgVertical {
 		object-fit: contain;

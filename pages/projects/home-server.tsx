@@ -3,7 +3,13 @@ import styled from "styled-components";
 import ImageDisplay from "@/components/ImageDisplay";
 
 // Image Imports
+import nextcloudPic from "public/project-pictures/nextcloud.png"
+import digitalOcean from "public/project-pictures/digital-ocean.png"
 import homeServerPic from "public/project-pictures/home-network.jpeg";
+import ubiquitiPic from "public/project-pictures/ubiquiti.jpg"
+import cheapPcPic from "public/project-pictures/cheap-pc.png"
+
+
 import placeHolderPic from "public/placeholder.png";
 
 const HomeServer = () => {
@@ -54,7 +60,7 @@ const HomeServer = () => {
 						<div className="line" />
 					</div>
 
-					<ImageDisplay image={placeHolderPic} altText="PlaceHolder" />
+					<ImageDisplay image={nextcloudPic} altText="PlaceHolder" />
 
 					<div className="description">
 						<p>
@@ -83,7 +89,7 @@ const HomeServer = () => {
 						<div className="line" />
 					</div>
 
-					<ImageDisplay image={placeHolderPic} altText="PlaceHolder" />
+					<ImageDisplay image={digitalOcean} altText="PlaceHolder" />
 
 					<div className="description">
 						<p>
@@ -106,7 +112,7 @@ const HomeServer = () => {
 						<div className="line" />
 					</div>
 
-					<ImageDisplay image={placeHolderPic} altText="PlaceHolder" />
+					<ImageDisplay image={cheapPcPic} altText="PlaceHolder" />
 
 					<div className="description">
 						<p>
@@ -128,7 +134,7 @@ const HomeServer = () => {
 						<h2>November 2022</h2>
 						<div className="line" />
 					</div>
-					<ImageDisplay image={placeHolderPic} altText="PlaceHolder" />
+					<ImageDisplay image={ubiquitiPic} altText="PlaceHolder" />
 
 					<div className="description">
 						<p>
