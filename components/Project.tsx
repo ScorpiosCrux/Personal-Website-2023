@@ -1,98 +1,47 @@
 import styled from "styled-components";
-import styles from "@/components/Project.module.css";
-import Image from "next/image";
-import Link from "next/link";
+import { StaticImageData } from "next/image";
+import ImageDisplay from "./ImageDisplay";
+import Description from "./Description";
+import LearnMoreBtn from "./buttons/LearnMoreBtn";
 
 type Props = {
-	title: string;
-	description: string;
-	techList: string[];
-	url: string;
+  title: string;
+  description: string;
+  preview?: StaticImageData;
+  techList: string[];
+  url: string;
 };
 
 const Project = (props: Props) => {
-	return (
-		<ProjectContent>
-			<h3>{props.title}</h3>
-			<p>{props.description}</p>
+  return (
+    <StyledProject>
+      {props.preview && (
+        <ImageDisplay image={props.preview} altText={"Home Server Setup Preview"} />
+      )}
 
-			<TechList>
-				{props.techList.map((tech: string, i: number) => (
-					<TechItem key={i}>{tech}</TechItem>
-				))}
-			</TechList>
+      <Description
+        title={props.title}
+        description={props.description}
+        techList={props.techList}
+        url={props.url}
+      />
 
-			<LearnMoreBtn>
-				<NavLink href={props.url}>
-					LEARN MORE
-					<RightArrow />
-				</NavLink>
-			</LearnMoreBtn>
-		</ProjectContent>
-	);
+      <LearnMoreBtn url={props.url} />
+    </StyledProject>
+  );
 };
 
-const ProjectContent = styled.div`
-	grid-column: 1 / 13;
-	background-color: #1d1d1d;
-	padding: 30px;
-	border-radius: 5px;
-	margin-bottom: 20px;
-	
-`;
+const StyledProject = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
-const TechList = styled.ul`
-	display: flex;
-	list-style: none;
-	flex-wrap: wrap;
-	gap: 5px;
-	margin-top: 10px;
-`;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  border-radius: 0.5rem;
+  max-width: 900px;
 
-const TechItem = styled.li`
-	border: 1px white solid;
-	border-radius: 20px;
-	padding: 0px 10px;
-	font-size: 0.8rem;
-`;
-
-const RightArrow = styled.img`
-	content: url(${"/arrow-white.svg"});
-	aspect-ratio: 1;
-	height: 20px;
-`;
-
-const LearnMoreBtn = styled.div``;
-
-const NavLink = styled(Link)`
-	position: relative;
-	margin: 10px 0px;
-	border: 2px white solid;
-	border-radius: 5px;
-	width: fit-content;
-	padding: 2px 0 2px 10px;
-	margin-left: auto;
-	display: flex;
-	align-items: center;
-
-	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-	-moz-user-select: none; /* Old versions of Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-
-	:hover {
-		transition: all 0.5s;
-		cursor: pointer;
-		background-color: white;
-		color: black;
-		${RightArrow} {
-			transition: all 0.5s;
-			content: url(${"/arrow-black.svg"});
-		}
-	}
+  background-color: #1d1d1d;
 `;
 
 export default Project;

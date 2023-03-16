@@ -33,12 +33,17 @@ export const TechList = styled.ul`
 `;
 
 export const TimelineSection = styled.section`
-	padding-bottom: 40px;
+	padding: 1rem 0rem;
+	margin-bottom: 5rem;
 	display: flex;
 	flex-direction: column;
 
 	p {
 		margin-bottom: 20px;
+	}
+
+	.description{
+		margin-top: 1rem;
 	}
 
 	.description p:last-of-type {

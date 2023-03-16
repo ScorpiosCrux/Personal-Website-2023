@@ -21,15 +21,16 @@ const StyledRightArrow = styled.img`
 `;
 
 const StyledLearnMoreContainer = styled(Link)`
-  position: relative;
-  margin: 10px 0px;
-  border: 2px white solid;
-  border-radius: 5px;
   width: fit-content;
-  padding: 2px 0 2px 10px;
+
   margin-left: auto;
+  padding: 2px 0 2px 10px;
+
   display: flex;
   align-items: center;
+
+  border: 2px white solid;
+  border-radius: 5px;
 
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
