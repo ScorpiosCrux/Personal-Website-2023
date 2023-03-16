@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import styles from "@/components/Project.module.css";
-import Image from "next/image";
+import { StaticImageData } from "next/image";
 import Link from "next/link";
+import ImageDisplay from "./ImageDisplay";
 
 type Props = {
 	title: string;
 	description: string;
+	preview: StaticImageData;
 	techList: string[];
 	url: string;
 };
@@ -15,14 +16,14 @@ const FeaturedProject = (props: Props) => {
 		<StyledProjectGrid>
 			<StyledProject>
 				<ProjectImageWrapper>
-					<ProjectImage />
+					<ImageDisplay image={props.preview} altText={"Home Server Setup Preview"} />
 				</ProjectImageWrapper>
 				<ProjectContent>
 					<h3>{props.title}</h3>
 					<p>{props.description}</p>
 
 					<TechList>
-						{props.techList.map((tech: string, i:number) => (
+						{props.techList.map((tech: string, i: number) => (
 							<TechItem key={i}>{tech}</TechItem>
 						))}
 					</TechList>
@@ -64,13 +65,13 @@ const ProjectImageWrapper = styled.div`
 	grid-column: 1 / 13;
 `;
 
-const ProjectImage = styled.img`
-	content: url(${"/placeholder.png"});
-	position: relative;
-	max-width: 100%;
-	object-fit: cover;
-	border-radius: 5px;
-`;
+// const ProjectImage = styled.img`
+// 	content: url(${"/placeholder.png"});
+// 	position: relative;
+// 	max-width: 100%;
+// 	object-fit: cover;
+// 	border-radius: 5px;
+// `;
 
 const TechList = styled.ul`
 	display: flex;

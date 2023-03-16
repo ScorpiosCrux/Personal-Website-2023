@@ -3,6 +3,10 @@ import styled from "styled-components";
 import FeaturedProject from "@/components/FeaturedProject";
 import Project from "@/components/Project";
 
+// Image Imports
+import labPreviewPic from "public/project-pictures/home-server/cheap-pc.png";
+import smartBudgetPreviewPic from "public/project-pictures/smart-budget/smart-budget.png";
+
 const Projects = () => {
 	return (
 		<>
@@ -24,6 +28,7 @@ const Projects = () => {
 						description="My servers are where I get to experiment and apply the knowledge that I learn. These machines allow
 					me to run a variety of applications such as websites, game servers, APIs, on high performance
 					hardware."
+						preview={labPreviewPic}
 						techList={[
 							"Networking",
 							"Security",
@@ -36,7 +41,10 @@ const Projects = () => {
 					/>
 					<FeaturedProject
 						title="Smart Budget Application"
-						description=""
+						description="Smart Budget is an app that I created to help interact with my spendings more. 
+						Instead just paying off another number in your credit card statements, here you can organize,
+						 interact and visualize how much you're spending!"
+						preview={smartBudgetPreviewPic}
 						techList={["MongoDB", "Express", "React", "TypeScript", "JWT"]}
 						url={"/projects/smart-budget"}
 					/>
