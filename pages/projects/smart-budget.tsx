@@ -35,7 +35,7 @@ const HomeServer = () => {
           </StyledParagraph>
 
           <h4>Summary of Technologies Used</h4>
-          <StyledParagraph>(These are the highlights of the cool ones to me)</StyledParagraph>
+          <StyledParagraph>(These are the highlights of the cool ones)</StyledParagraph>
 
           <TechList
             techList={[
