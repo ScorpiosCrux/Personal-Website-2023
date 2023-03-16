@@ -5,6 +5,7 @@ import ImageDisplay from "@/components/ImageDisplay";
 // Image Imports
 import udemyPic from "public/project-pictures/smart-budget/udemy.png";
 import figmaPic from "public/project-pictures/smart-budget/figma.png";
+import previewPic from "public/project-pictures/smart-budget/smart-budget.png";
 
 import placeHolderPic from "public/placeholder.png";
 
@@ -38,6 +39,7 @@ const HomeServer = () => {
 						<li>TypeScript</li>
 						<li>JWT</li>
 						<li>Styled Components</li>
+						<li>Figma</li>
 					</TechList>
 				</div>
 
@@ -99,24 +101,26 @@ const HomeServer = () => {
 
 				<TimelineSection>
 					<div className="timeHeader">
-						<h2>2021</h2>
+						<h2>Jan 2023</h2>
 						<div className="line" />
 					</div>
 
 					<ImageDisplay image={figmaPic} altText="PlaceHolder" />
+					<ImageDisplay image={previewPic} altText="PlaceHolder" />
 
 					<div className="description">
 						<p>
-							About 1 year later, I thought hosting at home was a flop. I recently discovered Google
-							Cloud Platform and found Digital Ocean to be a cheaper alternative. Moved NextCloud to
-							Digital Ocean for $26, now I was able to access my files from inside and outside my
-							network with encryption!
+							My last semester at UofC I took a class on advanced programming techniques and a
+							course on Web Development. Thus, with my newly acquired skills and experience I
+							decided to rebuild Smart Budget with the best industry standards in mind!
 						</p>
+
+						<p>Here I use figma to try out designs and layouts before creating the actual product.</p>
+
+						<p>The second image demonstrates how it looks like currently.</p>
 					</div>
 					<TechList>
-						<li>Digital Ocean</li>
-						<li>Cloud Providers</li>
-						<li>UFW</li>
+						<li>Figma</li>
 					</TechList>
 				</TimelineSection>
 			</ProjectTimeline>
