@@ -8,7 +8,8 @@ import previewPic from "public/project-pictures/smart-budget/smart-budget.png";
 
 import { ProjectTimeline, TimelineSection, TimelineSubSection } from "@/components/ProjectTimeline";
 import TechList from "@/components/TechList";
-import { StyledParagraph, StyledTimeHeader } from "@/components/Typography";
+import { StyledParagraph } from "@/components/Typography";
+import TimeHeader from "@/components/TimeHeader";
 
 const HomeServer = () => {
   return (
@@ -50,10 +51,7 @@ const HomeServer = () => {
         </div>
 
         <TimelineSection>
-          <StyledTimeHeader>
-            <h2>May 2022</h2>
-            <div className="line" />
-          </StyledTimeHeader>
+          <TimeHeader date="May 2022" />
 
           <TimelineSubSection>
             <ImageDisplay image={udemyPic} altText="PlaceHolder" />
@@ -109,10 +107,7 @@ const HomeServer = () => {
         </TimelineSection>
 
         <TimelineSection>
-          <StyledTimeHeader>
-            <h2>Jan 2023</h2>
-            <div className="line" />
-          </StyledTimeHeader>
+          <TimeHeader date="Jan 2023" />
 
           <TimelineSubSection>
             <ImageDisplay image={figmaPic} altText="PlaceHolder" />
