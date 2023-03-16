@@ -17,7 +17,7 @@ const HomeServer = () => {
   return (
     <>
       <Head>
-        <title>Tyler Chen | Home Servers</title>
+        <title>Home Lab | Projects</title>
         <meta name="description" content="Tyler Chen's Home Server" />
         <meta name="keywords" content="Tyler Chen, Home Server" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

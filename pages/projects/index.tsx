@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <>
       <Head>
-        <title>Tyler Chen | Projects</title>
+        <title>Projects | Tyler Chen</title>
         <meta name="description" content="Learn more about Tyler Chen's Projects" />
         <meta name="keywords" content="Tyler Chen, Projects" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,7 +23,7 @@ const Projects = () => {
           </StyledSectionTitle>
 
           <Project
-            title="Home Servers Setup"
+            title="Home Lab"
             description="My servers are where I get to experiment and apply the knowledge that I learn. These machines allow
 					me to run a variety of applications such as websites, game servers, APIs, on high performance
 					hardware."

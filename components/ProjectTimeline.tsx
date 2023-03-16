@@ -32,5 +32,8 @@ export const TimelineSection = styled.section`
 `;
 
 export const TimelineSubSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin-bottom: 2rem;
 `;
