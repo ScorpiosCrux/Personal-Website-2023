@@ -8,6 +8,7 @@ import figmaPic from "public/project-pictures/smart-budget/figma.png";
 import previewPic from "public/project-pictures/smart-budget/smart-budget.png";
 
 import placeHolderPic from "public/placeholder.png";
+import { ProjectTimeline, TechList, TimelineSection } from "@/components/ProjectTimeline";
 
 const HomeServer = () => {
 	return (
@@ -115,7 +116,9 @@ const HomeServer = () => {
 							decided to rebuild Smart Budget with the best industry standards in mind!
 						</p>
 
-						<p>Here I use figma to try out designs and layouts before creating the actual product.</p>
+						<p>
+							Here I use figma to try out designs and layouts before creating the actual product.
+						</p>
 
 						<p>The second image demonstrates how it looks like currently.</p>
 					</div>
@@ -129,61 +132,3 @@ const HomeServer = () => {
 };
 
 export default HomeServer;
-
-const ProjectTimeline = styled.div`
-	max-width: 900px;
-	font-size: 1.25rem;
-
-	h1 {
-		text-align: center;
-	}
-
-	h4 {
-		margin-top: 20px;
-	}
-
-	.projectHeader {
-		margin-bottom: 50px;
-	}
-`;
-
-const TimelineSection = styled.section`
-	padding-bottom: 40px;
-	display: flex;
-	flex-direction: column;
-
-	p {
-		margin-bottom: 20px;
-	}
-
-	.description p:last-of-type {
-		margin-bottom: 0;
-	}
-
-	.timeHeader {
-		display: flex;
-		align-items: center;
-		gap: 20px;
-		margin-bottom: 20px;
-
-		.line {
-			flex-grow: 1;
-			border: white 0.5px solid;
-		}
-	}
-`;
-
-const TechList = styled.ul`
-	display: flex;
-	list-style: none;
-	flex-wrap: wrap;
-	gap: 5px;
-	margin-top: 10px;
-
-	li {
-		border: 1px white solid;
-		border-radius: 20px;
-		padding: 0px 10px;
-		font-size: 0.9rem;
-	}
-`;

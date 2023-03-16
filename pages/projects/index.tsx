@@ -40,7 +40,7 @@ const Projects = () => {
 						url={"/projects/home-server"}
 					/>
 					<FeaturedProject
-						title="Smart Budget Application"
+						title="Smart Budget Web Application"
 						description="Smart Budget is an app that I created to help interact with my spendings more. 
 						Instead just paying off another number in your credit card statements, here you can organize,
 						 interact and visualize how much you're spending!"
@@ -84,7 +84,7 @@ const Projects = () => {
 					<Project
 						title="Personal Website"
 						description="Currently, this website is the second version of my website that I've built."
-						techList={["NextJS", "ReactTS", "CSS", "HTML", "Apache2", "Search Engine Optimization"]}
+						techList={["NextJS", "ReactTS", "CSS", "HTML", "Apache2", "Search Engine Optimization", "GitLab CI", "Docker" ]}
 						url={"/"}
 					/>
 

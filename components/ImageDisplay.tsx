@@ -11,9 +11,9 @@ const ImageDisplay = ({ image, altText }: Props) => {
 	return (
 		<ImageContainer image={image}>
 			{image.width > image.height ? (
-				<Image src={image} className={"imgHorizontal"} alt={altText} />
+				<Image src={image} className={"img imgHorizontal"} alt={altText} />
 			) : (
-				<Image src={image} className={"imgVertical"} alt={altText} />
+				<Image src={image} className={"img imgVertical"} alt={altText} />
 			)}
 		</ImageContainer>
 	);
@@ -27,14 +27,17 @@ const ImageContainer = styled.div<{ image: StaticImageData }>`
 	max-height: 800px;
 	${(props) => props.image.width < props.image.height && `height: ${props.image.height}px;`}
 
-	.imgVertical {
+	.img {
+		border-radius: 5px;
 		object-fit: contain;
+	}
+
+	.imgVertical {
 		width: auto;
 		height: 100%;
 	}
 
 	.imgHorizontal {
-		object-fit: contain;
 		width: 100%;
 		height: auto;
 	}

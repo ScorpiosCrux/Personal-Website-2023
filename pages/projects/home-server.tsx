@@ -1,13 +1,14 @@
 import Head from "next/head";
 import styled from "styled-components";
 import ImageDisplay from "@/components/ImageDisplay";
+import { ProjectTimeline, TechList, TimelineSection } from "@/components/ProjectTimeline";
 
 // Image Imports
-import nextcloudPic from "public/project-pictures/home-server/nextcloud.png"
-import digitalOcean from "public/project-pictures/home-server/digital-ocean.png"
+import nextcloudPic from "public/project-pictures/home-server/nextcloud.png";
+import digitalOcean from "public/project-pictures/home-server/digital-ocean.png";
 import homeServerPic from "public/project-pictures/home-server/home-network.jpeg";
-import ubiquitiPic from "public/project-pictures/home-server/ubiquiti.jpg"
-import cheapPcPic from "public/project-pictures/home-server/cheap-pc.png"
+import ubiquitiPic from "public/project-pictures/home-server/ubiquiti.jpg";
+import cheapPcPic from "public/project-pictures/home-server/cheap-pc.png";
 
 const HomeServer = () => {
 	return (
@@ -185,61 +186,3 @@ const HomeServer = () => {
 };
 
 export default HomeServer;
-
-const ProjectTimeline = styled.div`
-	max-width: 900px;
-	font-size: 1.25rem;
-
-	h1 {
-		text-align: center;
-	}
-
-	h4 {
-		margin-top: 20px;
-	}
-
-	.projectHeader {
-		margin-bottom: 50px;
-	}
-`;
-
-const TimelineSection = styled.section`
-	padding-bottom: 40px;
-	display: flex;
-	flex-direction: column;
-
-	p {
-		margin-bottom: 20px;
-	}
-
-	.description p:last-of-type {
-		margin-bottom: 0;
-	}
-
-	.timeHeader {
-		display: flex;
-		align-items: center;
-		gap: 20px;
-		margin-bottom: 20px;
-
-		.line {
-			flex-grow: 1;
-			border: white 0.5px solid;
-		}
-	}
-`;
-
-const TechList = styled.ul`
-	display: flex;
-	list-style: none;
-	flex-wrap: wrap;
-	gap: 5px;
-	margin-top: 10px;
-
-	li {
-		border: 1px white solid;
-		border-radius: 20px;
-		padding: 0px 10px;
-		font-size: 0.9rem;
-	}
-`;
