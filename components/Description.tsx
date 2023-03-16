@@ -1,25 +1,16 @@
 import styled from "styled-components";
-import TechList from "./TechList";
 
-type Props = {
-  title: string;
-  description: string;
-  techList: string[];
-  url: string;
-};
+export const StyledTimeHeader = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
 
-const Description = (props: Props) => {
-  return (
-    <StyledDescription>
-      <StyledTitle>{props.title}</StyledTitle>
-      <StyledParagraph>{props.description}</StyledParagraph>
-
-      <TechList techList={props.techList} />
-    </StyledDescription>
-  );
-};
-
-export default Description;
+  & .line {
+    flex-grow: 1;
+    border: white 0.5px solid;
+  }
+`;
 
 export const StyledDescription = styled.div`
   display: flex;
