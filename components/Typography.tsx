@@ -17,6 +17,12 @@ export const StyledDescription = styled.div`
   flex-direction: column;
 `;
 
+export const StyledPageHeader = styled.h1`
+  
+`
+
 export const StyledTitle = styled.h2``;
 
-export const StyledParagraph = styled.p``;
+export const StyledParagraph = styled.p`
+  margin-bottom: 1rem;
+`;

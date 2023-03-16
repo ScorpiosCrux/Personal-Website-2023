@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styled from "styled-components";
 import ImageDisplay from "@/components/ImageDisplay";
 
 // Image Imports
@@ -7,8 +6,9 @@ import udemyPic from "public/project-pictures/smart-budget/udemy.png";
 import figmaPic from "public/project-pictures/smart-budget/figma.png";
 import previewPic from "public/project-pictures/smart-budget/smart-budget.png";
 
-import placeHolderPic from "public/placeholder.png";
-import { ProjectTimeline, TechList, TimelineSection } from "@/components/ProjectTimeline";
+import { ProjectTimeline, TimelineSection, TimelineSubSection } from "@/components/ProjectTimeline";
+import TechList from "@/components/TechList";
+import { StyledParagraph, StyledTimeHeader } from "@/components/Typography";
 
 const HomeServer = () => {
   return (
@@ -23,108 +23,119 @@ const HomeServer = () => {
       <ProjectTimeline>
         <div className="projectHeader">
           <h1>Smart Budget</h1>
-          <p>
+          <StyledParagraph>
             Smart Budget is an app that I created to help interact with my spendings more. Instead
             just paying off another number in your credit card statements, here you can organize,
             interact and visualize how much you&apos;re spending!
-          </p>
+          </StyledParagraph>
 
-          <p>This is also my first website idea that I used to learn Web Development!</p>
+          <StyledParagraph>
+            This is also my first website idea that I used to learn Web Development!
+          </StyledParagraph>
 
           <h4>Summary of Technologies Used</h4>
-          <p>(These are the highlights of the cool ones to me)</p>
-          <TechList>
-            <li>MongoDB</li>
-            <li>Express</li>
-            <li>React</li>
-            <li>TypeScript</li>
-            <li>JWT</li>
-            <li>Styled Components</li>
-            <li>Figma</li>
-          </TechList>
+          <StyledParagraph>(These are the highlights of the cool ones to me)</StyledParagraph>
+
+          <TechList
+            techList={[
+              "MongoDB",
+              "Express",
+              "React",
+              "TypeScript",
+              "JWT",
+              "Styled Components",
+              "Figma",
+            ]}
+          />
         </div>
 
         <TimelineSection>
-          <div className="timeHeader">
+          <StyledTimeHeader>
             <h2>May 2022</h2>
             <div className="line" />
-          </div>
+          </StyledTimeHeader>
 
-          <ImageDisplay image={udemyPic} altText="PlaceHolder" />
+          <TimelineSubSection>
+            <ImageDisplay image={udemyPic} altText="PlaceHolder" />
 
-          <div className="description">
-            <p>
+            <StyledParagraph>
               I was recommended by a friend to take a look at a Udemy Course called The Web
               Developer Bootcamp by Colt Steele which what inspired me so much to get into Web
               Development. In the following tech list, I show exactly what I learnt!
-            </p>
+            </StyledParagraph>
 
-            <p>
+            <StyledParagraph>
               Even though I could jump straight into TypeScript, React, etc, I decided against that
               because I wanted a strong foundation. Learning the foundations allows me to adapt to
               any new libraries, frameworks or languages with ease!
-            </p>
-          </div>
-          <TechList>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>Flexbox</li>
-            <li>Responsive Design</li>
-            <li>JavaScript (all 2022 modern syntax, ES6, ES2018, etc.)</li>
-            <li>Asynchronous JavaScript - Promises, async/await, etc.</li>
-            <li>AJAX and single page apps</li>
-            <li>Bootstrap 4 and 5 (alpha)</li>
-            <li>SemanticUI</li>
-            <li>Bulma CSS Framework</li>
-            <li>DOM Manipulation</li>
-            <li>Unix(Command Line) Commands</li>
-            <li>NodeJS</li>
-            <li>NPM</li>
-            <li>ExpressJS</li>
-            <li>Templating</li>
-            <li>REST</li>
-            <li>SQL vs. NoSQL databases</li>
-            <li>MongoDB</li>
-            <li>Database Associations</li>
-            <li>Schema Design</li>
-            <li>Mongoose</li>
-            <li>Authentication From Scratch</li>
-            <li>Cookies & Sessions</li>
-            <li>Authorization</li>
-            <li>Common Security Issues - SQL Injection, XSS, etc.</li>
-            <li>Developer Best Practices</li>
-            <li>Deploying Apps</li>
-            <li>Cloud Databases</li>
-            <li>Image Upload and Storage</li>
-            <li>Maps and Geocoding</li>
-          </TechList>
+            </StyledParagraph>
+          </TimelineSubSection>
+
+          <TechList
+            techList={[
+              "HTML5",
+              "CSS3",
+              "Flexbox",
+              "Responsive Design",
+              "JavaScript (all 2022 modern syntax, ES6, ES2018, etc.)",
+              "Asynchronous JavaScript - Promises, async/await, etc.",
+              "AJAX and single page apps",
+              "Bootstrap 4 and 5 (alpha)",
+              "SemanticUI",
+              "Bulma CSS Framework",
+              "DOM Manipulation",
+              "Unix(Command Line) Commands",
+              "NodeJS",
+              "NPM",
+              "ExpressJS",
+              "Templating",
+              "REST",
+              "SQL vs. NoSQL databases",
+              "MongoDB",
+              "Database Associations",
+              "Schema Design",
+              "Mongoose",
+              "Authentication From Scratch",
+              "Cookies & Sessions",
+              "Authorization",
+              "Common Security Issues - SQL Injection, XSS, etc.",
+              "Developer Best Practices",
+              "Deploying Apps",
+              "Cloud Databases",
+              "Image Upload and Storage",
+              "Maps and Geocoding",
+            ]}
+          />
         </TimelineSection>
 
         <TimelineSection>
-          <div className="timeHeader">
+          <StyledTimeHeader>
             <h2>Jan 2023</h2>
             <div className="line" />
-          </div>
+          </StyledTimeHeader>
 
-          <ImageDisplay image={figmaPic} altText="PlaceHolder" />
-          <ImageDisplay image={previewPic} altText="PlaceHolder" />
+          <TimelineSubSection>
+            <ImageDisplay image={figmaPic} altText="PlaceHolder" />
 
-          <div className="description">
-            <p>
+            <StyledParagraph>
               My last semester at UofC I took a class on advanced programming techniques and a
               course on Web Development. Thus, with my newly acquired skills and experience I
               decided to rebuild Smart Budget with the best industry standards in mind!
-            </p>
+            </StyledParagraph>
 
-            <p>
+            <StyledParagraph>
               Here I use figma to try out designs and layouts before creating the actual product.
-            </p>
+            </StyledParagraph>
+          </TimelineSubSection>
 
-            <p>The second image demonstrates how it looks like currently.</p>
-          </div>
-          <TechList>
-            <li>Figma</li>
-          </TechList>
+          <TimelineSubSection>
+            <ImageDisplay image={previewPic} altText="PlaceHolder" />
+            <StyledParagraph>
+              The above image demonstrates how it looks like currently.
+            </StyledParagraph>
+          </TimelineSubSection>
+
+          <TechList techList={["Figma"]} />
         </TimelineSection>
       </ProjectTimeline>
     </>

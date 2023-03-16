@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { StaticImageData } from "next/image";
 import ImageDisplay from "./ImageDisplay";
-import Description from "./Description";
+import { StyledDescription, StyledTitle } from "./Typography";
 import LearnMoreBtn from "./buttons/LearnMoreBtn";
+import TechList from "./TechList";
 
 type Props = {
   title: string;
@@ -19,12 +20,13 @@ const Project = (props: Props) => {
         <ImageDisplay image={props.preview} altText={"Home Server Setup Preview"} />
       )}
 
-      <Description
-        title={props.title}
-        description={props.description}
-        techList={props.techList}
-        url={props.url}
-      />
+      <StyledDescription>
+        <StyledTitle>{props.title}</StyledTitle>
+
+        <StyledDescription>{props.description}</StyledDescription>
+
+        <TechList techList={props.techList} />
+      </StyledDescription>
 
       <LearnMoreBtn url={props.url} />
     </StyledProject>
