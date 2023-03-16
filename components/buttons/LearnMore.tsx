@@ -7,20 +7,20 @@ interface Props {
 
 const LearnMoreBtn = (props: Props) => {
   return (
-    <NavLink href={props.url}>
+    <StyledLearnMoreContainer href={props.url}>
       LEARN MORE
-      <RightArrow />
-    </NavLink>
+      <StyledRightArrow />
+    </StyledLearnMoreContainer>
   );
 };
 
-const RightArrow = styled.img`
+const StyledRightArrow = styled.img`
   content: url(${"/arrow-white.svg"});
   aspect-ratio: 1;
   height: 20px;
 `;
 
-const NavLink = styled(Link)`
+const StyledLearnMoreContainer = styled(Link)`
   position: relative;
   margin: 10px 0px;
   border: 2px white solid;
