@@ -91,6 +91,7 @@ const Projects = () => {
 							"Gephi",
 						]}
 						url={"/projects/network-analysis"}
+						repoURL={"https://github.com/ScorpiosCrux/CPSC-572-Valorant-Network"}
 					/>
 
 					<Project
@@ -107,6 +108,7 @@ const Projects = () => {
 							"Docker",
 						]}
 						url={"/projects/network-analysis"}
+						repoURL={"https://gitlab.tylerchen.ca/tylerchen/personal-website-2023"}
 					/>
 
 					<Project
@@ -117,6 +119,7 @@ const Projects = () => {
 					interface with tasks."
 						techList={["C#", "Blazor", "CSS", "HTML"]}
 						url={"/"}
+						repoURL={"https://gitlab.tylerchen.ca/tylerchen/gym-tracks"}
 					/>
 				</StyledSection>
 			</StyledMain>
