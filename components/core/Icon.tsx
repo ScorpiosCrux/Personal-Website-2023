@@ -10,7 +10,7 @@ interface Props {
 const Icon = (props: Props) => {
 	return (
 		<StyledIcon width={props.width}>
-			<Image src={props.image} alt={props.alt} priority />
+			<Image src={props.image} alt={props.alt} />
 		</StyledIcon>
 	);
 };
