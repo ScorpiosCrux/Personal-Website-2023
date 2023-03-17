@@ -1,13 +1,10 @@
 import Head from "next/head";
-import ImageDisplay from "@/components/ImageDisplay";
-import { ProjectTimeline, TimelineSection, TimelineSubSection } from "@/components/ProjectTimeline";
-
-// Image Imports
-import nextcloudPic from "public/project-pictures/home-server/nextcloud.png";
-import digitalOcean from "public/project-pictures/home-server/digital-ocean.png";
-import homeServerPic from "public/project-pictures/home-server/home-network.jpeg";
-import ubiquitiPic from "public/project-pictures/home-server/ubiquiti.jpg";
-import cheapPcPic from "public/project-pictures/home-server/cheap-pc.png";
+import {
+	ProjectTimeline,
+	TimelineSection,
+	TimelineSubSection,
+	VideoDisplay,
+} from "@/components/ProjectTimeline";
 import TechList from "@/components/TechList";
 import { StyledParagraph } from "@/components/Typography";
 import TimeHeader from "@/components/TimeHeader";
@@ -48,15 +45,17 @@ const HomeServer = () => {
 					<TimeHeader date="Dec 2022" />
 
 					<TimelineSubSection>
-						<iframe
-							width="800"
-							height={"450"}
-							src="https://www.youtube.com/embed/8D5eRy8Cml8"
-							title="YouTube video player"
-							frameBorder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							allowFullScreen
-						/>
+						<VideoDisplay>
+							<iframe
+								width="800"
+								height={"450"}
+								src="https://www.youtube.com/embed/8D5eRy8Cml8"
+								title="YouTube video player"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowFullScreen
+							/>
+						</VideoDisplay>
 
 						<StyledParagraph>
 							Here is a video that we made for the app to demonstrate it's capabilities and purpose!

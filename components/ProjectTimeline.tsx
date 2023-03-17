@@ -37,3 +37,10 @@ export const TimelineSubSection = styled.div`
   gap: 1rem;
   margin-bottom: 2rem;
 `;
+
+export const VideoDisplay = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+`
