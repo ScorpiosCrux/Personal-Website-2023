@@ -1,9 +1,5 @@
 import Head from "next/head";
-import {
-	ProjectTimeline,
-	TimelineSubSection,
-	VideoDisplay,
-} from "@/components/ProjectTimeline";
+import { ProjectTimeline, TimelineSubSection, VideoDisplay } from "@/components/ProjectTimeline";
 import TechList from "@/components/TechList";
 import { StyledParagraph } from "@/components/Typography";
 import TimeHeader from "@/components/TimeHeader";
@@ -13,11 +9,11 @@ const HomeServer = () => {
 	return (
 		<>
 			<Head>
-				<title>Valorant DuoQ| Projects</title>
+				<title>Valorant DuoQ | Projects</title>
 				<meta name="description" content="Tyler Chen's Home Server" />
 				<meta name="keywords" content="Tyler Chen, Home Server" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<ProjectTimeline>
 				<div className="projectHeader">
@@ -38,7 +34,7 @@ const HomeServer = () => {
 							"Apache2",
 							"Git (GitHub)",
 							"Typescript",
-							"Styled Components"
+							"Styled Components",
 						]}
 					/>
 				</div>

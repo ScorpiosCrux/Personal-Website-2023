@@ -2,7 +2,6 @@ import Head from "next/head";
 import ImageDisplay from "@/components/ImageDisplay";
 import { ProjectTimeline, TimelineSubSection } from "@/components/ProjectTimeline";
 
-
 // Image Imports
 import nextcloudPic from "public/project-pictures/home-server/nextcloud.png";
 import digitalOcean from "public/project-pictures/home-server/digital-ocean.png";
@@ -15,158 +14,158 @@ import TimeHeader from "@/components/TimeHeader";
 import { StyledSection } from "@/components/core/StyledSection";
 
 const HomeServer = () => {
-  return (
-    <>
-      <Head>
-        <title>Home Lab | Projects</title>
-        <meta name="description" content="Tyler Chen's Home Server" />
-        <meta name="keywords" content="Tyler Chen, Home Server" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <ProjectTimeline>
-        <div className="projectHeader">
-          <h1>Home Server Setup</h1>
-          <p>
-            My server is an example of who I am. It is one of my most important ongoing projects. I
-            constantly try, learn and correct concepts and ideas with my server as you will see in
-            the following:
-          </p>
+	return (
+		<>
+			<Head>
+				<title>Home Lab | Projects</title>
+				<meta name="description" content="Tyler Chen's Home Server" />
+				<meta name="keywords" content="Tyler Chen, Home Server" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.png" />
+			</Head>
+			<ProjectTimeline>
+				<div className="projectHeader">
+					<h1>Home Server Setup</h1>
+					<p>
+						My server is an example of who I am. It is one of my most important ongoing projects. I
+						constantly try, learn and correct concepts and ideas with my server as you will see in
+						the following:
+					</p>
 
-          <h4>Summary of Technologies Used: </h4>
-          <TechList
-            techList={[
-              "SSL Certificates",
-              "Ubuntu Server",
-              "Apache2",
-              "Systemd",
-              "PHP",
-              "MariaDB",
-              "Digital Ocean",
-              "Cloud Providers",
-              "UFW",
-              "HTML",
-              "CSS",
-              "DDoS Protection",
-              "Dynamic DNS",
-              "Docker",
-              "GitLab",
-              "GitLab Runners",
-              "pfSense",
-              "Battery Backups",
-            ]}
-          />
-        </div>
+					<h4>Summary of Technologies Used: </h4>
+					<TechList
+						techList={[
+							"SSL Certificates",
+							"Ubuntu Server",
+							"Apache2",
+							"Systemd",
+							"PHP",
+							"MariaDB",
+							"Digital Ocean",
+							"Cloud Providers",
+							"UFW",
+							"HTML",
+							"CSS",
+							"DDoS Protection",
+							"Dynamic DNS",
+							"Docker",
+							"GitLab",
+							"GitLab Runners",
+							"pfSense",
+							"Battery Backups",
+						]}
+					/>
+				</div>
 
-        <StyledSection>
-          <TimeHeader date="Dec 2019" />
+				<StyledSection>
+					<TimeHeader date="Dec 2019" />
 
-          <TimelineSubSection>
-            <ImageDisplay image={nextcloudPic} altText="PlaceHolder" />
+					<TimelineSubSection>
+						<ImageDisplay image={nextcloudPic} altText="PlaceHolder" />
 
-            <StyledParagraph>
-              When COVID-19 started, I decided to build a server to experiment with Linux and
-              Deployment. I wanted a place where I could show people my work! A dedicated server!
-            </StyledParagraph>
+						<StyledParagraph>
+							When COVID-19 started, I decided to build a server to experiment with Linux and
+							Deployment. I wanted a place where I could show people my work! A dedicated server!
+						</StyledParagraph>
 
-            <StyledParagraph>
-              To start, I deployed NextCloud, a file sharing server. <b>Problem:</b> Could not
-              create SSL certs for a local IP as it wasn&apos;t reachable by local cert authorities.
-            </StyledParagraph>
-          </TimelineSubSection>
+						<StyledParagraph>
+							To start, I deployed NextCloud, a file sharing server. <b>Problem:</b> Could not
+							create SSL certs for a local IP as it wasn&apos;t reachable by local cert authorities.
+						</StyledParagraph>
+					</TimelineSubSection>
 
-          <TechList
-            techList={["SSL Certificates", "Ubuntu Server", "Apache2", "Systemd", "PHP", "MariaDB"]}
-          />
-        </StyledSection>
+					<TechList
+						techList={["SSL Certificates", "Ubuntu Server", "Apache2", "Systemd", "PHP", "MariaDB"]}
+					/>
+				</StyledSection>
 
-        <StyledSection>
-          <TimeHeader date="2021" />
+				<StyledSection>
+					<TimeHeader date="2021" />
 
-          <TimelineSubSection>
-            <ImageDisplay image={digitalOcean} altText="PlaceHolder" />
+					<TimelineSubSection>
+						<ImageDisplay image={digitalOcean} altText="PlaceHolder" />
 
-            <StyledParagraph>
-              About 1 year later, I thought hosting at home was a flop. I recently discovered Google
-              Cloud Platform and found Digital Ocean to be a cheaper alternative. Moved NextCloud to
-              Digital Ocean for $26, now I was able to access my files from inside and outside my
-              network with encryption!
-            </StyledParagraph>
-          </TimelineSubSection>
-          <TechList techList={["Digital Ocean", "Cloud Providers", "UFW"]} />
-        </StyledSection>
+						<StyledParagraph>
+							About 1 year later, I thought hosting at home was a flop. I recently discovered Google
+							Cloud Platform and found Digital Ocean to be a cheaper alternative. Moved NextCloud to
+							Digital Ocean for $26, now I was able to access my files from inside and outside my
+							network with encryption!
+						</StyledParagraph>
+					</TimelineSubSection>
+					<TechList techList={["Digital Ocean", "Cloud Providers", "UFW"]} />
+				</StyledSection>
 
-        <StyledSection>
-          <TimeHeader date="Jun 2022" />
+				<StyledSection>
+					<TimeHeader date="Jun 2022" />
 
-          <TimelineSubSection>
-            <ImageDisplay image={cheapPcPic} altText="PlaceHolder" />
+					<TimelineSubSection>
+						<ImageDisplay image={cheapPcPic} altText="PlaceHolder" />
 
-            <StyledParagraph>
-              Bought a $300 computer to experiment with pfSense, but decided to try my previously
-              flopped deployment with new knowledge! Installed NextCloud and my new personal
-              website! <b>Problem: </b>
-              Same issues, but I figured out that, using a VPN, I am technically always outside my
-              network.
-            </StyledParagraph>
-          </TimelineSubSection>
-          <TechList techList={["HTML", "CSS"]} />
-        </StyledSection>
+						<StyledParagraph>
+							Bought a $300 computer to experiment with pfSense, but decided to try my previously
+							flopped deployment with new knowledge! Installed NextCloud and my new personal
+							website! <b>Problem: </b>
+							Same issues, but I figured out that, using a VPN, I am technically always outside my
+							network.
+						</StyledParagraph>
+					</TimelineSubSection>
+					<TechList techList={["HTML", "CSS"]} />
+				</StyledSection>
 
-        <StyledSection>
-          <TimeHeader date="Nov 2022" />
+				<StyledSection>
+					<TimeHeader date="Nov 2022" />
 
-          <TimelineSubSection>
-            <ImageDisplay image={ubiquitiPic} altText="PlaceHolder" />
+					<TimelineSubSection>
+						<ImageDisplay image={ubiquitiPic} altText="PlaceHolder" />
 
-            <StyledParagraph>
-              Discovered a router called Ubiquiti ER-X. Though this router has a feature called
-              &quot;NAT reflection&quot; which allows me to connect to my server using my public IP!
-            </StyledParagraph>
-          </TimelineSubSection>
-        </StyledSection>
+						<StyledParagraph>
+							Discovered a router called Ubiquiti ER-X. Though this router has a feature called
+							&quot;NAT reflection&quot; which allows me to connect to my server using my public IP!
+						</StyledParagraph>
+					</TimelineSubSection>
+				</StyledSection>
 
-        <StyledSection>
-          <TimeHeader date="Jan 2023" />
+				<StyledSection>
+					<TimeHeader date="Jan 2023" />
 
-          <TimelineSubSection>
-            <ImageDisplay image={homeServerPic} altText="Picture of Home Server" />
+					<TimelineSubSection>
+						<ImageDisplay image={homeServerPic} altText="Picture of Home Server" />
 
-            <StyledParagraph>
-              My biggest update yet! Added a pfSense firewall, setup dynamic DNS with Cloudflare.
-            </StyledParagraph>
+						<StyledParagraph>
+							My biggest update yet! Added a pfSense firewall, setup dynamic DNS with Cloudflare.
+						</StyledParagraph>
 
-            <StyledParagraph>
-              Upgraded a few parts in the $300 PC and then created a secondary server for
-              development and experimentation. Used Docker Compose to deploy GitLab CE and Docker to
-              deploy GitLab runners on the main server.
-            </StyledParagraph>
+						<StyledParagraph>
+							Upgraded a few parts in the $300 PC and then created a secondary server for
+							development and experimentation. Used Docker Compose to deploy GitLab CE and Docker to
+							deploy GitLab runners on the main server.
+						</StyledParagraph>
 
-            <StyledParagraph>
-              During the summer, I experienced some sudden shutdowns due to lighting, and thus to
-              prevent sudden dataloss from brownouts or blackouts, I added a 1500VA battery backup
-              to both servers!
-            </StyledParagraph>
+						<StyledParagraph>
+							During the summer, I experienced some sudden shutdowns due to lighting, and thus to
+							prevent sudden dataloss from brownouts or blackouts, I added a 1500VA battery backup
+							to both servers!
+						</StyledParagraph>
 
-            <StyledParagraph>
-              My server is now equiped with many features a typical cloud provider has!
-            </StyledParagraph>
-          </TimelineSubSection>
-          <TechList
-            techList={[
-              "DDoS Protection",
-              "Dynamic DNS",
-              "Docker",
-              "GitLab",
-              "GitLab Runners",
-              "pfSense",
-              "Battery Backups",
-            ]}
-          />
-        </StyledSection>
-      </ProjectTimeline>
-    </>
-  );
+						<StyledParagraph>
+							My server is now equiped with many features a typical cloud provider has!
+						</StyledParagraph>
+					</TimelineSubSection>
+					<TechList
+						techList={[
+							"DDoS Protection",
+							"Dynamic DNS",
+							"Docker",
+							"GitLab",
+							"GitLab Runners",
+							"pfSense",
+							"Battery Backups",
+						]}
+					/>
+				</StyledSection>
+			</ProjectTimeline>
+		</>
+	);
 };
 
 export default HomeServer;

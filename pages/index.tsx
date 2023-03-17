@@ -5,13 +5,13 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Tyler Chen | Home</title>
+				<title>Tyler Chen</title>
 				<meta
 					name="description"
 					content="Learn about Tyler Chen and his projects! Located in Calgary, Alberta!"
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.png" />
 			</Head>
 
 			<div className={styles.container}>

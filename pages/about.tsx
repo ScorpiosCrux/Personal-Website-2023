@@ -2,18 +2,18 @@ import Head from "next/head";
 import styles from "@/styles/About.module.css";
 import styled from "styled-components";
 
-import SelfPic from "public/self-picture.jpg"
+import SelfPic from "public/self-picture.jpg";
 import ImageDisplay from "@/components/ImageDisplay";
 
 const About = () => {
 	return (
 		<>
 			<Head>
-				<title>Tyler Chen | About</title>
+				<title>About | Tyler Chen</title>
 				<meta name="description" content="Learn more about Tyler Chen" />
 				<meta name="keywords" content="Tyler Chen, About, Full Stack Developer" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<main className={styles.main}>
 				<section className={styles.section}>
@@ -21,20 +21,20 @@ const About = () => {
 					<div className={styles.inner}>
 						<StyledText>
 							<p>
-								Hello, my name is Tyler Chen, and I enjoy learning about technologies and using them to solve
-								issues in the world. I started coding in 2015 building simple Python functions. Years later,
-								I&apos;m more passionate than ever!
+								Hello, my name is Tyler Chen, and I enjoy learning about technologies and using them
+								to solve issues in the world. I started coding in 2015 building simple Python
+								functions. Years later, I&apos;m more passionate than ever!
 							</p>
 
 							<p>
-								Having recently graduated from the University of Calgary with a degree in Computer Science!
-								I&apos;m taking a break before I apply for jobs to learn about the technologies that
-								I&apos;ve discovered during my internship and courses!
+								Having recently graduated from the University of Calgary with a degree in Computer
+								Science! I&apos;m taking a break before I apply for jobs to learn about the
+								technologies that I&apos;ve discovered during my internship and courses!
 							</p>
 
 							<p>
-								Recently, I&apos;ve been working on my home lab and here are a few interesting technologies
-								I&apos;ve been working with:
+								Recently, I&apos;ve been working on my home lab and here are a few interesting
+								technologies I&apos;ve been working with:
 							</p>
 							<ul className={styles.techList}>
 								<li>- Docker Compose</li>

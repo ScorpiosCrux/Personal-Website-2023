@@ -9,11 +9,11 @@ const Page = () => {
 	return (
 		<>
 			<Head>
-				<title>Network Analysis|Projects</title>
+				<title>Network Analysis | Projects</title>
 				<meta name="description" content="Tyler Chen's Home Server" />
 				<meta name="keywords" content="Tyler Chen, Home Server" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.png" />
 			</Head>
 
 			<ProjectTimeline>
