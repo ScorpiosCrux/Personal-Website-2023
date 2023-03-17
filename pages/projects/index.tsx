@@ -71,7 +71,6 @@ const Projects = () => {
 							"Styled Components",
 						]}
 						url={"/projects/duoq"}
-						repoURL={"https://gitlab.tylerchen.ca/tylerchen/smart-budget"}
 					/>
 					<Project
 						title="Professional Valorant Player Network Analysis"
