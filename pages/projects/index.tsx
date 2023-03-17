@@ -87,7 +87,7 @@ const Projects = () => {
 							"Numpy",
 							"Gephi",
 						]}
-						url={"/"}
+						url={"/projects/network-analysis"}
 					/>
 
 					<Project
@@ -103,7 +103,7 @@ const Projects = () => {
 							"GitLab CI",
 							"Docker",
 						]}
-						url={"/"}
+						url={"/projects/network-analysis"}
 					/>
 
 					<Project

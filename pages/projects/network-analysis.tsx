@@ -1,19 +1,22 @@
 import Head from "next/head";
-import {
-	ProjectTimeline,
-	TimelineSubSection,
-	VideoDisplay,
-} from "@/components/ProjectTimeline";
+import { ProjectTimeline, TimelineSubSection, VideoDisplay } from "@/components/ProjectTimeline";
 import TechList from "@/components/TechList";
 import { StyledParagraph } from "@/components/Typography";
 import TimeHeader from "@/components/TimeHeader";
 import { StyledSection } from "@/components/core/StyledSection";
 
-const HomeServer = () => {
+import Image from "next/image";
+import icon from "public/icons/github.svg";
+import icon2 from "public/icons/gitlab.svg";
+import Icon from "@/components/core/Icon";
+import IconButton from "@/components/core/IconBtn";
+import GitHub from "@/components/buttons/GitHub";
+
+const Page = () => {
 	return (
 		<>
 			<Head>
-				<title>Valorant DuoQ| Projects</title>
+				<title>Network Analysis|Projects</title>
 				<meta name="description" content="Tyler Chen's Home Server" />
 				<meta name="keywords" content="Tyler Chen, Home Server" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,30 +24,36 @@ const HomeServer = () => {
 			</Head>
 			<ProjectTimeline>
 				<div className="projectHeader">
-					<h1>Valorant DuoQ</h1>
+					<h1>Valorant Network Analysis</h1>
 					<p>
-						Valorant DuoQ was a school project built for our web dev course. It was a group of 6 and
-						we had about 2 weeks to build it.
+						Valorant Network Analysis was a project where we studied how nodes (anything) that is
+						related to something will affect something. This project, we analyzed the Valorant
+						E-Sports Network. We run
 					</p>
 
 					<h4>Summary of Technologies Used: </h4>
 					<TechList
 						techList={[
-							"MongoDB",
-							"ExpressJS",
-							"ReactTS",
-							"NodeJS",
-							"Ubuntu Server",
-							"Apache2",
-							"Git (GitHub)",
-							"Typescript",
-							"Styled Components"
+							"iPython Notebooks",
+							"Python",
+							"Selenium",
+							"Matplotlib",
+							"Sklearn",
+							"Tensorflow",
+							"Seaborn",
+							"Pandas",
+							"Numpy",
+							"Gephi",
 						]}
 					/>
+
+					<Icon image={icon} width={"50px"} alt={"GitHub Icon"} />
+					<Icon image={icon2} width={"50px"} alt={"GitHub Icon"} />
+					<GitHub url="https://gitlab.tylerchen.ca/tylerchen" />
 				</div>
 
 				<StyledSection>
-					<TimeHeader date="Dec 2022" />
+					<TimeHeader date="Sep 2022 - Dec 2022" />
 
 					<TimelineSubSection>
 						<VideoDisplay>
@@ -69,4 +78,4 @@ const HomeServer = () => {
 	);
 };
 
-export default HomeServer;
+export default Page;

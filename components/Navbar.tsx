@@ -1,5 +1,11 @@
 import Link from "next/link";
 import styled from "@emotion/styled";
+import IconButton from "./core/IconBtn";
+
+import icon2 from "public/icons/gitlab.svg";
+import GitHub from "./buttons/GitHub";
+import GitLab from "./buttons/GitLab";
+import LinkedIn from "./buttons/LinkedIn";
 
 const Navbar = () => {
 	return (
@@ -30,18 +36,9 @@ const Navbar = () => {
 				</NavLink>
 			</Links>
 			<ExternalLinks>
-				<Link href={"https://gitlab.tylerchen.ca/tylerchen"} target={"_blank"}>
-					<Icon url="/gitlab.svg" />
-				</Link>
-				<Link href={"https://github.com/ScorpiosCrux"} target={"_blank"}>
-					<Icon url="/github.svg" />
-				</Link>
-				<Link href={"https://www.linkedin.com/in/tyler-chen1/"} target={"_blank"}>
-					<Icon url="/linkedin.svg" />
-				</Link>
-				<Link href={"https://cloud.tylerchen.ca/"} target={"_blank"}>
-					<Icon url="/nextcloud.svg" />
-				</Link>
+				<GitHub url={"https://github.com/ScorpiosCrux"}/>
+				<GitLab url={"https://gitlab.tylerchen.ca/tylerchen"} />
+				<LinkedIn url={"https://www.linkedin.com/in/tyler-chen1/"} />
 			</ExternalLinks>
 		</Wrapper>
 	);
