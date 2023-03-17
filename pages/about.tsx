@@ -1,10 +1,8 @@
-import Navbar from "@/components/Navbar";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/About.module.css";
 import styled from "styled-components";
 
-import SelfPic from "public/self.jpg"
+import SelfPic from "public/self-picture.jpg"
 import ImageDisplay from "@/components/ImageDisplay";
 
 const About = () => {
