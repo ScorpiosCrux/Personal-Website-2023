@@ -56,7 +56,7 @@ const HomeServer = () => {
 						</VideoDisplay>
 
 						<StyledParagraph>
-							Here is a video that we made for the app to demonstrate it's capabilities and purpose!
+							Here is a video that we made for the app to demonstrate it&apos;s capabilities and purpose!
 						</StyledParagraph>
 					</TimelineSubSection>
 				</StyledSection>
