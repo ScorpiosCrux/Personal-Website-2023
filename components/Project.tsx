@@ -16,6 +16,7 @@ type Props = {
 	url: string;
 	repoURL?: string;
 	demoURL?: string;
+	isLearnMoreDisabled?: boolean;
 };
 
 const Project = (props: Props) => {
@@ -38,8 +39,7 @@ const Project = (props: Props) => {
 					{props.repoURL && <GitLab url={props.repoURL} />}
 					{props.demoURL && <ExternalSite url={props.demoURL} />}
 				</StyledProjectIcons>
-
-				<LearnMoreBtn url={props.url} />
+				{!props.isLearnMoreDisabled && <LearnMoreBtn url={props.url} />}
 			</StyledProjectLinks>
 		</StyledSection>
 	);

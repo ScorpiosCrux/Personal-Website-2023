@@ -29,11 +29,11 @@ const Navbar = () => {
 						PROJECTS
 					</Link>
 				</NavLink>
-				<NavLink>
+				{/* <NavLink>
 					<Link className="inner-link" href={"/contact"}>
 						CONTACT
 					</Link>
-				</NavLink>
+				</NavLink> */}
 			</Links>
 			<ExternalLinks>
 				<GitHub url={"https://github.com/ScorpiosCrux"}/>

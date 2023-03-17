@@ -91,6 +91,7 @@ const Projects = () => {
 						]}
 						url={"/projects/network-analysis"}
 						repoURL={"https://github.com/ScorpiosCrux/CPSC-572-Valorant-Network"}
+						isLearnMoreDisabled
 					/>
 
 					<Project
@@ -108,6 +109,7 @@ const Projects = () => {
 						]}
 						url={"/projects/network-analysis"}
 						repoURL={"https://gitlab.tylerchen.ca/tylerchen/personal-website-2023"}
+						isLearnMoreDisabled
 					/>
 
 					<Project
@@ -119,6 +121,7 @@ const Projects = () => {
 						techList={["C#", "Blazor", "CSS", "HTML"]}
 						url={"/"}
 						repoURL={"https://gitlab.tylerchen.ca/tylerchen/gym-tracks"}
+						isLearnMoreDisabled
 					/>
 				</StyledSection>
 			</StyledMain>
