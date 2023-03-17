@@ -4,6 +4,9 @@ import Image from "next/image";
 import styles from "@/styles/About.module.css";
 import styled from "styled-components";
 
+import SelfPic from "public/self.jpg"
+import ImageDisplay from "@/components/ImageDisplay";
+
 const About = () => {
 	return (
 		<>
@@ -48,7 +51,7 @@ const About = () => {
 							</ul>
 						</StyledText>
 						<StyledImage>
-							<Image src={"/portrait_placeholder.jpg"} width={300} height={300} alt={"Tyler Chen Portrait"} />
+							<ImageDisplay image={SelfPic} altText={"Self Protrai"} />
 						</StyledImage>
 					</div>
 				</section>
