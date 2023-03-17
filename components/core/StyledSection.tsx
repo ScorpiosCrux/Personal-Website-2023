@@ -5,7 +5,7 @@ export const StyledSection = styled.section`
 
 	padding: 2rem;
 	border-radius: 1rem;
-	margin-bottom: 5rem;
+	margin-bottom: 2rem;
 
 	display: flex;
 	flex-direction: column;
