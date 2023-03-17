@@ -57,7 +57,17 @@ const Projects = () => {
 					<Project
 						title="Valorant DuoQ"
 						description="2022 | A matchmaking app that matches 2 Valorant players together based on filters and stats. "
-						techList={["ReactTS", "TypeScript", "Express", "Apache 2", "Styled Components"]}
+						techList={[
+							"MongoDB",
+							"ExpressJS",
+							"ReactTS",
+							"NodeJS",
+							"Ubuntu Server",
+							"Apache2",
+							"Git (GitHub)",
+							"Typescript",
+							"Styled Components",
+						]}
 						url={"/projects/duoq"}
 					/>
 					<Project

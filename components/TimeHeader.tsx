@@ -17,7 +17,6 @@ export const StyledTimeHeader = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 20px;
 
   & .line {
     flex-grow: 1;

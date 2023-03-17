@@ -6,10 +6,11 @@ import udemyPic from "public/project-pictures/smart-budget/udemy.png";
 import figmaPic from "public/project-pictures/smart-budget/figma.png";
 import previewPic from "public/project-pictures/smart-budget/smart-budget.png";
 
-import { ProjectTimeline, TimelineSection, TimelineSubSection } from "@/components/ProjectTimeline";
+import { ProjectTimeline, TimelineSubSection } from "@/components/ProjectTimeline";
 import TechList from "@/components/TechList";
 import { StyledParagraph } from "@/components/Typography";
 import TimeHeader from "@/components/TimeHeader";
+import { StyledSection } from "@/components/core/StyledSection";
 
 const HomeServer = () => {
   return (
@@ -50,7 +51,7 @@ const HomeServer = () => {
           />
         </div>
 
-        <TimelineSection>
+        <StyledSection>
           <TimeHeader date="May 2022" />
 
           <TimelineSubSection>
@@ -104,9 +105,9 @@ const HomeServer = () => {
               "Maps and Geocoding",
             ]}
           />
-        </TimelineSection>
+        </StyledSection>
 
-        <TimelineSection>
+        <StyledSection>
           <TimeHeader date="Jan 2023" />
 
           <TimelineSubSection>
@@ -131,7 +132,7 @@ const HomeServer = () => {
           </TimelineSubSection>
 
           <TechList techList={["Figma"]} />
-        </TimelineSection>
+        </StyledSection>
       </ProjectTimeline>
     </>
   );

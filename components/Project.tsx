@@ -4,6 +4,7 @@ import ImageDisplay from "./ImageDisplay";
 import { StyledDescription, StyledTitle } from "./Typography";
 import LearnMoreBtn from "./buttons/LearnMoreBtn";
 import TechList from "./TechList";
+import { StyledSection } from "./core/StyledSection";
 
 type Props = {
   title: string;
@@ -15,7 +16,7 @@ type Props = {
 
 const Project = (props: Props) => {
   return (
-    <StyledProject>
+    <StyledSection>
       {props.preview && (
         <ImageDisplay image={props.preview} altText={"Home Server Setup Preview"} />
       )}
@@ -29,7 +30,7 @@ const Project = (props: Props) => {
       </StyledDescription>
 
       <LearnMoreBtn url={props.url} />
-    </StyledProject>
+    </StyledSection>
   );
 };
 

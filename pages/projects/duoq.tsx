@@ -1,13 +1,13 @@
 import Head from "next/head";
 import {
 	ProjectTimeline,
-	TimelineSection,
 	TimelineSubSection,
 	VideoDisplay,
 } from "@/components/ProjectTimeline";
 import TechList from "@/components/TechList";
 import { StyledParagraph } from "@/components/Typography";
 import TimeHeader from "@/components/TimeHeader";
+import { StyledSection } from "@/components/core/StyledSection";
 
 const HomeServer = () => {
 	return (
@@ -37,11 +37,13 @@ const HomeServer = () => {
 							"Ubuntu Server",
 							"Apache2",
 							"Git (GitHub)",
+							"Typescript",
+							"Styled Components"
 						]}
 					/>
 				</div>
 
-				<TimelineSection>
+				<StyledSection>
 					<TimeHeader date="Dec 2022" />
 
 					<TimelineSubSection>
@@ -61,7 +63,7 @@ const HomeServer = () => {
 							Here is a video that we made for the app to demonstrate it's capabilities and purpose!
 						</StyledParagraph>
 					</TimelineSubSection>
-				</TimelineSection>
+				</StyledSection>
 			</ProjectTimeline>
 		</>
 	);

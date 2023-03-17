@@ -1,6 +1,7 @@
 import Head from "next/head";
 import ImageDisplay from "@/components/ImageDisplay";
-import { ProjectTimeline, TimelineSection, TimelineSubSection } from "@/components/ProjectTimeline";
+import { ProjectTimeline, TimelineSubSection } from "@/components/ProjectTimeline";
+
 
 // Image Imports
 import nextcloudPic from "public/project-pictures/home-server/nextcloud.png";
@@ -11,6 +12,7 @@ import cheapPcPic from "public/project-pictures/home-server/cheap-pc.png";
 import TechList from "@/components/TechList";
 import { StyledParagraph } from "@/components/Typography";
 import TimeHeader from "@/components/TimeHeader";
+import { StyledSection } from "@/components/core/StyledSection";
 
 const HomeServer = () => {
   return (
@@ -56,7 +58,7 @@ const HomeServer = () => {
           />
         </div>
 
-        <TimelineSection>
+        <StyledSection>
           <TimeHeader date="Dec 2019" />
 
           <TimelineSubSection>
@@ -76,9 +78,9 @@ const HomeServer = () => {
           <TechList
             techList={["SSL Certificates", "Ubuntu Server", "Apache2", "Systemd", "PHP", "MariaDB"]}
           />
-        </TimelineSection>
+        </StyledSection>
 
-        <TimelineSection>
+        <StyledSection>
           <TimeHeader date="2021" />
 
           <TimelineSubSection>
@@ -92,9 +94,9 @@ const HomeServer = () => {
             </StyledParagraph>
           </TimelineSubSection>
           <TechList techList={["Digital Ocean", "Cloud Providers", "UFW"]} />
-        </TimelineSection>
+        </StyledSection>
 
-        <TimelineSection>
+        <StyledSection>
           <TimeHeader date="Jun 2022" />
 
           <TimelineSubSection>
@@ -109,9 +111,9 @@ const HomeServer = () => {
             </StyledParagraph>
           </TimelineSubSection>
           <TechList techList={["HTML", "CSS"]} />
-        </TimelineSection>
+        </StyledSection>
 
-        <TimelineSection>
+        <StyledSection>
           <TimeHeader date="Nov 2022" />
 
           <TimelineSubSection>
@@ -122,9 +124,9 @@ const HomeServer = () => {
               &quot;NAT reflection&quot; which allows me to connect to my server using my public IP!
             </StyledParagraph>
           </TimelineSubSection>
-        </TimelineSection>
+        </StyledSection>
 
-        <TimelineSection>
+        <StyledSection>
           <TimeHeader date="Jan 2023" />
 
           <TimelineSubSection>
@@ -161,7 +163,7 @@ const HomeServer = () => {
               "Battery Backups",
             ]}
           />
-        </TimelineSection>
+        </StyledSection>
       </ProjectTimeline>
     </>
   );
