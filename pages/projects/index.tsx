@@ -37,6 +37,7 @@ const Projects = () => {
 							"Terminals",
 						]}
 						url={"/projects/home-server"}
+						repoURL={"https://gitlab.tylerchen.ca/tylerchen/home-lab"}
 					/>
 					<Project
 						title="Smart Budget Web Application"
@@ -46,6 +47,7 @@ const Projects = () => {
 						preview={smartBudgetPreviewPic}
 						techList={["MongoDB", "Express", "React", "TypeScript", "JWT"]}
 						url={"/projects/smart-budget"}
+						repoURL={"https://gitlab.tylerchen.ca/tylerchen/smart-budget"}
 					/>
 				</StyledSection>
 
@@ -69,6 +71,7 @@ const Projects = () => {
 							"Styled Components",
 						]}
 						url={"/projects/duoq"}
+						repoURL={"https://gitlab.tylerchen.ca/tylerchen/smart-budget"}
 					/>
 					<Project
 						title="Professional Valorant Player Network Analysis"

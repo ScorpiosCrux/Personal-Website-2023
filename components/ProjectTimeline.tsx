@@ -4,6 +4,8 @@ export const ProjectTimeline = styled.div`
 	max-width: 900px;
 	font-size: 1.25rem;
 
+	margin-top: 4rem;
+
 	& h1 {
 		text-align: center;
 	}

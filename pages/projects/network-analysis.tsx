@@ -5,13 +5,6 @@ import { StyledParagraph } from "@/components/Typography";
 import TimeHeader from "@/components/TimeHeader";
 import { StyledSection } from "@/components/core/StyledSection";
 
-import Image from "next/image";
-import icon from "public/icons/github.svg";
-import icon2 from "public/icons/gitlab.svg";
-import Icon from "@/components/core/Icon";
-import IconButton from "@/components/core/IconBtn";
-import GitHub from "@/components/buttons/GitHub";
-
 const Page = () => {
 	return (
 		<>
@@ -22,6 +15,7 @@ const Page = () => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+
 			<ProjectTimeline>
 				<div className="projectHeader">
 					<h1>Valorant Network Analysis</h1>
@@ -46,10 +40,6 @@ const Page = () => {
 							"Gephi",
 						]}
 					/>
-
-					<Icon image={icon} width={"50px"} alt={"GitHub Icon"} />
-					<Icon image={icon2} width={"50px"} alt={"GitHub Icon"} />
-					<GitHub url="https://gitlab.tylerchen.ca/tylerchen" />
 				</div>
 
 				<StyledSection>

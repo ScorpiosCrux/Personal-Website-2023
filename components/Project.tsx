@@ -5,47 +5,58 @@ import { StyledDescription, StyledTitle } from "./Typography";
 import LearnMoreBtn from "./buttons/LearnMoreBtn";
 import TechList from "./TechList";
 import { StyledSection } from "./core/StyledSection";
+import GitLab from "./buttons/GitLab";
+import ExternalSite from "./buttons/ExternalSite";
 
 type Props = {
-  title: string;
-  description: string;
-  preview?: StaticImageData;
-  techList: string[];
-  url: string;
+	title: string;
+	description: string;
+	preview?: StaticImageData;
+	techList: string[];
+	url: string;
+	repoURL?: string;
+	demoURL?: string;
 };
 
 const Project = (props: Props) => {
-  return (
-    <StyledSection>
-      {props.preview && (
-        <ImageDisplay image={props.preview} altText={"Home Server Setup Preview"} />
-      )}
+	return (
+		<StyledSection>
+			{props.preview && (
+				<ImageDisplay image={props.preview} altText={"Home Server Setup Preview"} />
+			)}
 
-      <StyledDescription>
-        <StyledTitle>{props.title}</StyledTitle>
+			<StyledDescription>
+				<StyledTitle>{props.title}</StyledTitle>
 
-        <StyledDescription>{props.description}</StyledDescription>
+				<StyledDescription>{props.description}</StyledDescription>
 
-        <TechList techList={props.techList} />
-      </StyledDescription>
+				<TechList techList={props.techList} />
+			</StyledDescription>
 
-      <LearnMoreBtn url={props.url} />
-    </StyledSection>
-  );
+			<StyledProjectLinks>
+				<StyledProjectIcons>
+					{props.repoURL && <GitLab url={props.repoURL} />}
+					{props.demoURL && <ExternalSite url={props.demoURL} />}
+				</StyledProjectIcons>
+
+				<LearnMoreBtn url={props.url} />
+			</StyledProjectLinks>
+		</StyledSection>
+	);
 };
 
-const StyledProject = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+const StyledProjectLinks = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 0.5rem;
-  width: 100%;
-  max-width: 900px;
+	height: 3rem;
+`;
 
-  background-color: #1d1d1d;
+const StyledProjectIcons = styled.div`
+	height: 100%;
+	display: flex;
+	align-items: center;
 `;
 
 export default Project;

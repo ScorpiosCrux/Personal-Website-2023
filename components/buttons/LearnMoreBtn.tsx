@@ -23,7 +23,6 @@ const StyledRightArrow = styled.img`
 const StyledLearnMoreContainer = styled(Link)`
   width: fit-content;
 
-  margin-left: auto;
   padding: 2px 0 2px 10px;
 
   display: flex;

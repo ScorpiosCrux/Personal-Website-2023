@@ -7,7 +7,7 @@ interface Props {
 	image: StaticImageData;
 	alt: string;
 	width: string;
-	url: string
+	url: string;
 }
 
 const IconButton = (props: Props) => {
@@ -26,6 +26,10 @@ const StyledIconButton = styled(Link)`
 	-ms-user-select: none; /* Internet Explorer/Edge */
 	user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+
+	&:hover {
+		transform: translateY(-0.1rem);
+	}
 `;
 
 export default IconButton;
