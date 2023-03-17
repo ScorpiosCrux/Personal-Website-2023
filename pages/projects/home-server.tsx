@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styled from "styled-components";
 import ImageDisplay from "@/components/ImageDisplay";
 import { ProjectTimeline, TimelineSection, TimelineSubSection } from "@/components/ProjectTimeline";
 

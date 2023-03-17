@@ -39,8 +39,9 @@ const StyledProject = styled.div`
   gap: 1rem;
 
   padding: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   border-radius: 0.5rem;
+  width: 100%;
   max-width: 900px;
 
   background-color: #1d1d1d;
