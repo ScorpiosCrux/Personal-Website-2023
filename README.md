@@ -1,40 +1,52 @@
-https://stackoverflow.com/questions/17990647/npm-install-errors-with-error-enoent-chmod
+# Personal Portfolio Website
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[Link To My Website](https://tylerchen.ca)
 
-## Getting Started
+This frontend website was built to demonstrate my projects that I spent countless hours on.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 💻 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The tech stack that I used for this project are
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### `TypeScript`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+I used typescript because after developing with vanilla JavaScript, I realized that I could develop a lot faster with auto-complete. Know exactly what type of variable is passed around speeds up the process of debugging.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### `React`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+React allows me to write reusable code. Instead of copying the same Navbar on each page, I just need to make one React component that can be displayed on each page. When I need to change that element, I only need to change it once instead of changing each copy.
 
-## Learn More
+### `Styled-Components`
 
-To learn more about Next.js, take a look at the following resources:
+Styled Components allow me to turn CSS into Components as well! Instead of having CSS styles exist as their own file, we create components from them. This also means that I can conditionally render styles by passing a prop to the styled component.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `CI/CD`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+GitLab CI allows me to deploy my changes immediately. Since this is a personal portfolio, and I am constantly working on projects, I wanted to make changing my website as easiest as possible! Thus, whenever I make changes to this repo, an updated one will be deployed immediately!
 
-## Deploy on Vercel
+### `Docker`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Docker allows me to containerize my projects with their correct package versions as each of my docker containers can have their own version of NodeJS for example. It also allows me to quickly start up my website with only Docker installed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### `Apache2 Web Server`
+
+Apache allows me to serve websites to the public depending on which domain I have. It also allows me to reverse proxy to my docker containers! I use Apache instead of Nginx because Apache is harder to understand and thus being stubborn and challenging myself will allow me to learn Nginx a lot more easily.
+
+
+## 😥 Challenges
+
+- My biggest challenges for this project was getting the pipeline up and running. It was very difficult to find the proper documentation or tutorials to do what I wanted to do. I had spent a few days trying to figure out exactly how to get my GitLab runner to create those docker images inside a docker container. 
+- I had also setup my own GitLab Docker Registry because I thought I needed that. 
+- Connecting the GitLab's docker socket with my server's docker socket was also a learning curve.
+- Finally, my last big challenge would probably be deciding what components should be components. I spent a lot of time experimenting and seeing exactly what pieces of code should become a component.
+
+
+## 🔮 Future Work
+
+### Tests
+I am planning on creating tests that run periodically to check if my website is up and running. 
+
+### Mobile Version
+Currently the website is only made for desktop view, but soon I want to create a mobile version.
