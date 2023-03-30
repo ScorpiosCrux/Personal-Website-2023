@@ -14,12 +14,13 @@ const Projects = () => {
 				<meta name="description" content="Learn more about Tyler Chen's Projects" />
 				<meta name="keywords" content="Tyler Chen, Calgary, Fullstack Software Developer, Projects" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
 				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<StyledMain>
 				<StyledSection>
 					<StyledSectionTitle>
-						<h2>Passion Projects</h2>
+						<h1>Passion Projects</h1>
 					</StyledSectionTitle>
 
 					<Project

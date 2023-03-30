@@ -11,7 +11,7 @@ export default function Home() {
 					content="Learn about Tyler Chen and his projects! Software Developer located in Calgary, Alberta!"
 				/>
 				<meta name="keywords" content="Tyler Chen, Calgary, Fullstack Software Developer" />
-				<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+				<meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.png" />
 			</Head>

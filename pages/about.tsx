@@ -12,6 +12,7 @@ const About = () => {
 				<title>About | Tyler Chen</title>
 				<meta name="description" content="Learn more about Tyler Chen" />
 				<meta name="keywords" content="Tyler Chen, Calgary, Fullstack Software Developer, About" />
+				<meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.png" />
 			</Head>
