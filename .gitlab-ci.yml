@@ -9,7 +9,7 @@ clean:
   image: docker:latest
   allow_failure: true
   script:
-    - docker images -qf "dangling=true" # Removes *dangling* images aka. the ones that are "none" with tag "none"
+    - docker image prune -f
     - docker stop personal-website
 
 # Builds a docker image that is connected to the docker socket where the runner is located.
