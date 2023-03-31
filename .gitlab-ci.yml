@@ -9,8 +9,9 @@ clean:
   image: docker:latest
   allow_failure: true
   script:
-    - docker image prune -f
     - docker stop personal-website
+    - docker image prune -f
+    - docker container prune -f
 
 # Builds a docker image that is connected to the docker socket where the runner is located.
 # Runs the container with:
@@ -25,4 +26,4 @@ deploy:
   image: docker:latest
   script:
     - docker build --pull -t $CI_REGISTRY_IMAGE .
-    - docker run -d -p 5000:3000 --rm --restart --name personal-website $CI_REGISTRY_IMAGE:latest
+    - docker run -d --restart unless-stopped -p 5000:3000 --rm --restart --name personal-website $CI_REGISTRY_IMAGE:latest
